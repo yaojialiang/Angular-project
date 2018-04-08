@@ -1,0 +1,29 @@
+/* 
+* @Author: Marte
+* @Date:   2018-04-08 18:00:59
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-04-08 20:38:16
+*/
+.footer{
+    display:flex;
+    height: 0.466667rem;
+    background-color:#666;
+    justify-content: space-around;
+    a:hover{
+        color:#f90;
+    }
+    a{
+        display:inline-block;
+        display: flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        i{
+            font-size:0.16rem;
+        }
+        span{
+            color:#fff;
+            font-size:0.16rem;
+        }
+    }
+}

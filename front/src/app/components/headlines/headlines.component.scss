@@ -1,0 +1,19 @@
+/* 
+* @Author: Marte
+* @Date:   2018-04-08 19:32:56
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-04-08 19:32:56
+*/
+#headlines{
+    height:100%;
+    display:flex;
+    background-color:#F0F0F0;
+    flex-direction:column;
+    .header{
+        width: 100%;height:0.433333rem;background-color:#F6F6F6;
+    }
+    .main{
+        width: 100%;flex:1;background-color:#FFFFFF;overflow-x:hidden;
+    
+    }
+}
