@@ -6,24 +6,30 @@
 */
 .footer{
     display:flex;
-    height: 0.466667rem;
-    background-color:#666;
+    height: 0.666667rem;
+    background-color:#343434;
     justify-content: space-around;
-    a:hover{
-        color:#f90;
-    }
+    
     a{
         display:inline-block;
         display: flex;
         flex-direction:column;
         align-items:center;
         justify-content:center;
+        color:#8B8587;
         i{
-            font-size:0.16rem;
+            color:#8B8587;
+            font-size:0.32rem;
         }
         span{
-            color:#fff;
-            font-size:0.16rem;
+            // color:#fff;
+            // font-size:0.16rem;
+        }
+    }
+    .ac{
+        color:#ED6D00;
+        i{
+            color:#ED6D00;
         }
     }
 }

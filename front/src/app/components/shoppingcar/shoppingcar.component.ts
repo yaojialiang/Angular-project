@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./shoppingcar.component.scss']
 })
 export class ShoppingcarComponent implements OnInit {
+	car:string='car'
+	constructor() { }
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+	ngOnInit() {
+	}
 
 
   aa($event){
