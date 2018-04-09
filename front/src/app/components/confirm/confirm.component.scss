@@ -1,0 +1,118 @@
+#confirm{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    .header{
+        display:flex;
+        width: 100%;
+        height:0.473333rem;
+        align-items:center;
+        justify-content:space-between;
+        background:#666;
+        color:#fff;
+        font-size:0.213333rem;
+        border-bottom:1px solid #9C9C9C;
+        li:nth-child(3){
+        }
+        li:nth-child(1){
+            padding-left:0.106667rem;
+            color:#fff;
+        }
+    }
+    .main{
+        width: 100%;
+        flex:1;
+        overflow-x: hidden;
+        background:#F4F4F4;
+        .carslist{
+            li{
+                display:flex;
+                height:1.6rem;
+                margin-bottom:0.106667rem;
+                justify-content:space-around;
+                align-items:center;
+                background:#fff;
+                img{
+                    width:2.101667rem;
+                    height:1.206667rem;
+
+                }
+                .carslist-tittle{
+                    width:2.233333rem;
+                    margin-left:0.266667rem;
+                }
+                .tittle{
+                    margin-bottom:0.333333rem;
+                }
+                .price{
+                    color:#F14635;
+                }
+                input{
+                    width:0.4rem;
+                }
+            }
+        }
+        .coupon{
+            display:flex;
+            height:0.76rem;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom:0.106667rem;
+            font-size:0.186667rem;
+            background: #fff;
+            li:nth-child(1){
+                padding-left:0.16rem;
+                .qty{
+                    color:#EF541E;
+                }
+            }
+            li:nth-child(2){
+                padding-right:0.16rem;
+                i{
+                    padding-left: 0.133333rem;
+                }
+            }
+        }
+        .invoice{
+            display:flex;
+            height:0.76rem;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom:0.106667rem;
+            font-size:0.186667rem;
+            background: #fff;
+            li:nth-child(1){
+                padding-left:0.16rem;
+            }
+            li:nth-child(2){
+                padding-right:0.16rem;
+                i{
+                    padding-left: 0.133333rem;
+                }
+            }
+        }
+    }
+    .l-present{
+        display:flex;
+        height:0.666667rem;
+        justify-content:space-between;
+        .present-l{
+            width:3.36rem;
+            height:0.666667rem;
+            background:#fff;
+            line-height:0.666667rem;
+            text-align: center;
+            .price1{
+                color:#EF541E;
+            }
+        }
+        .present-r{
+            width:1.653333rem;
+            height:0.666667rem;
+            background:#FE5722;
+            line-height:0.666667rem;
+            text-align: center;
+            color:#fff;
+        }
+    }
+}

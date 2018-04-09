@@ -12,4 +12,8 @@ export class ShoppingcarComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  aa($event){
+    
+  }
 }
