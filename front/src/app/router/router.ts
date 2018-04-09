@@ -7,11 +7,14 @@ import { ShoppingcarComponent } from '../components/shoppingcar/shoppingcar.comp
 import { MineComponent } from '../components/mine/mine.component'
 
 const routes: Routes = [
+    
+    {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: 'home',component: HomeComponent},
     {path: 'community',component: CommunityComponent},
     {path: 'headlines',component: HeadlinesComponent},
     {path: 'shoppingcar',component: ShoppingcarComponent},
     {path: 'mine',component: MineComponent},
+
 ]
 
 export const RootRouter = RouterModule.forRoot(
