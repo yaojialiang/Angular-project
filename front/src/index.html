@@ -5,10 +5,10 @@
   <title>Sonkwo</title>
   <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" id='vp'>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
+  
 </head>
 <body>
   <app-root></app-root>
@@ -18,7 +18,7 @@
     var wd = document.documentElement.clientWidth * window.devicePixelRatio / 10;
     document.getElementsByTagName("html")[0].style.fontSize = wd + "px";
     var scale = 1 / window.devicePixelRatio;
-    // var mstr = 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no';
-    // document.getElementById("vp").content = mstr;
+    var mstr = 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no';
+    document.getElementById("vp").content = mstr;
 </script>
 </html>

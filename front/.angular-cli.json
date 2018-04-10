@@ -10,7 +10,9 @@
       "assets": [
         "assets",
         "favicon.ico",
-        "base.css"
+        "base.css",
+        "swiper-4.2.0.min.css",
+        "swiper-4.2.0.min.js"
       ],
       "index": "index.html",
       "main": "main.ts",

@@ -5,7 +5,7 @@ import { CommunityComponent } from '../components/community/community.component'
 import { HeadlinesComponent } from '../components/headlines/headlines.component'
 import { ShoppingcarComponent } from '../components/shoppingcar/shoppingcar.component'
 import { MineComponent } from '../components/mine/mine.component'
-
+import {DetailsComponent} from '../components/details/details.component'
 const routes: Routes = [
     
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -14,6 +14,7 @@ const routes: Routes = [
     {path: 'headlines',component: HeadlinesComponent},
     {path: 'shoppingcar',component: ShoppingcarComponent},
     {path: 'mine',component: MineComponent},
+    {path: 'details/:id',component: DetailsComponent},
 
 ]
 

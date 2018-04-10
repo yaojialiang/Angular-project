@@ -12,6 +12,7 @@ import { HeadlinesComponent } from './components/headlines/headlines.component';
 import { CommunityComponent } from './components/community/community.component';
 import { ShoppingcarComponent } from './components/shoppingcar/shoppingcar.component';
 import { MineComponent } from './components/mine/mine.component';
+import { DetailsComponent } from './components/details/details.component';
 
 
 @NgModule({
@@ -24,7 +25,9 @@ import { MineComponent } from './components/mine/mine.component';
     HeadlinesComponent,
     CommunityComponent,
     ShoppingcarComponent,
-    MineComponent
+    MineComponent,
+    DetailsComponent,
+    
   ],
   imports: [
     BrowserModule,
