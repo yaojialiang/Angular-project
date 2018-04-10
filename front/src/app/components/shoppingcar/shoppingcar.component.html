@@ -2,49 +2,25 @@
     <ul class='header'>
         <li><i class="icon iconfont icon-xiangzuo"></i></li>
         <li>购物车</li>
-        <li (click)="aa($event)">编辑</li>
+        <li><span (click)="bianji($event)">编辑</span><span style="display:none;" (click)="wancheng($event)">完成</span></li>
     </ul>
     <div class="headed-tabs">
         <div>游戏</div>
         <div>周边</div>
     </div>
     <div class='main'>
-        <ul class="carslist">
-            <li>
-                <input type="checkbox" />
+        <ul class="carslist" >
+            <li *ngFor="let item of dataset">
+                <input type="checkbox"/>
                 <img src="https://s1.sonkwo.com/FhzTWiBW-opJtYSQrWk8CH1Vmg9Z?imageMogr2/thumbnail/256" />
                 <div class="carslist-tittle">
-                    <p class="tittle">火星求生 第一殖民地版</p>
-                    <p class="price">￥200</p>
-                </div>
-            </li>
-            <li>
-                <input type="checkbox" />
-                <img src="https://s1.sonkwo.com/FhzTWiBW-opJtYSQrWk8CH1Vmg9Z?imageMogr2/thumbnail/256" />
-                <div class="carslist-tittle">
-                    <p class="tittle">先祖遗产</p>
-                    <p class="price">￥200</p>
-                </div>
-            </li>
-            <li>
-                <input type="checkbox" />
-                <img src="https://s1.sonkwo.com/FhzTWiBW-opJtYSQrWk8CH1Vmg9Z?imageMogr2/thumbnail/256" />
-                <div class="carslist-tittle">
-                    <p class="tittle">湍流</p>
-                    <p class="price">￥200</p>
-                </div>
-            </li>
-            <li>
-                <input type="checkbox" />
-                <img src="https://s1.sonkwo.com/FhzTWiBW-opJtYSQrWk8CH1Vmg9Z?imageMogr2/thumbnail/256" />
-                <div class="carslist-tittle">
-                    <p class="tittle">火星求生 第一殖民地版</p>
-                    <p class="price">￥200</p>
+                    <p class="tittle">{{item.name}}</p>
+                    <p class="price">￥{{item.price}}</p>
                 </div>
             </li>
         </ul>
     </div>
-    <div class="carsFoot">
+    <div class="carsFoot" *ngIf=show>
         <input type="checkbox" />
         <div>
             <span>全选</span>
@@ -55,7 +31,13 @@
                 去结算
             </div>
         </a>
-        
     </div>
-    <app-footer></app-footer>
+    <div class="carsFoot1" *ngIf=show1>
+        <div>
+            <input type="checkbox" />
+            <span>全选</span>
+        </div>
+        <div class="cars-del">删除</div>
+    </div>
+     <app-footer [curr]="car"></app-footer>
 </div>

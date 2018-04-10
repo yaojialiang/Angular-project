@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RootRouter } from './router/router';
+import { HttpModule } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
@@ -34,7 +35,8 @@ import { PaymentComponent } from './components/payment/payment.component';
   ],
   imports: [
     BrowserModule,
-    RootRouter
+    RootRouter,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

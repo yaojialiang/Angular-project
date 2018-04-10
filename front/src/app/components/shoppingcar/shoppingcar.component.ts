@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Http } from '@angular/http';
 @Component({
   selector: 'app-shoppingcar',
   templateUrl: './shoppingcar.component.html',
@@ -7,13 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingcarComponent implements OnInit {
 	car:string='car'
-	constructor() { }
+    show:boolean=true;
+    show1:boolean=false;
+    dataset: Array<any>;
+    ipt: Array<any>;
+	constructor(private http : Http) { }
 
 	ngOnInit() {
+        this.http.get('http://localhost:8080/goods?page=1&pageitems=1').subscribe((res)=>{
+            this.dataset = res.json().data;
+            console.log(this.dataset);
+        })
 	}
 
-
-  aa($event){
-    
+  bianji($event:any){
+    $event.target.style.display="none"
+    $event.target.nextSibling.style.display="block"
+    this.show1=true;
+    this.show=false;
+  }
+  wancheng($event:any){
+    $event.target.previousSibling.style.display="block"
+    $event.target.style.display="none"
+    this.show = true;
+    this.show1=false;
   }
 }
