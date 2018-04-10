@@ -1,0 +1,40 @@
+<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_621568_j1jru92n89llerk9.css">
+<link rel="stylesheet" type="text/css" href="../../../assets/swiper-4.2.0.min.css">
+<div id="details">
+	<div class="header">
+		<div class="item1">
+			<i class="iconfont icon-jiantou3"></i>
+		</div>
+		<div class="conserch">
+			<div class="ac">商品</div>
+			<div>点评</div>
+		</div>
+		<div class="item2">
+			<i class="iconfont icon-101"></i>
+		</div>
+	</div>
+	<div class="main">
+		<div class="swiper-container">
+		    <div class="swiper-wrapper" (touchstart)="dow($event)" (touchend)="dow($event)">
+		        <div class="swiper-slide" *ngFor="let val of arr">
+		        	<img [src]="val">
+		        </div>
+		        <div class="swiper-slide">
+		        	<img [src]="arr[0]">
+		        </div>
+		    </div>
+		</div>
+	</div>
+	<div class="footer">
+		<div style="flex: 1;">
+			<i class="iconfont icon-gouwuche"></i>
+			<p>购物车</p>
+		</div>
+		<div style="flex: 1;">
+			<i class="iconfont icon-shoucang" style="font-size:0.24rem"></i>
+			<p>收藏</p>
+		</div>
+		<div style="flex: 2;background: #FF9700;color:#fff">加入购物车</div>
+		<div style="flex: 2;background: #FE5722;color:#fff">立即购买</div>
+	</div>
+</div>
