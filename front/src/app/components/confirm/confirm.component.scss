@@ -3,20 +3,24 @@
     display:flex;
     flex-direction:column;
     .header{
-        display:flex;
+       display:flex;
         width: 100%;
-        height:0.473333rem;
+        height:1.16rem;
         align-items:center;
         justify-content:space-between;
-        background:#666;
+        background:#000000;
         color:#fff;
-        font-size:0.213333rem;
+        font-size:0.4rem;
         border-bottom:1px solid #9C9C9C;
         li:nth-child(3){
         }
         li:nth-child(1){
             padding-left:0.106667rem;
             color:#fff;
+            i{
+                display:block;
+                font-size:0.373333rem;
+            }
         }
     }
     .main{
@@ -27,19 +31,20 @@
         .carslist{
             li{
                 display:flex;
-                height:1.6rem;
+                height:2.833333rem;
                 margin-bottom:0.106667rem;
                 justify-content:space-around;
                 align-items:center;
                 background:#fff;
                 img{
-                    width:2.101667rem;
-                    height:1.206667rem;
+                    width:3.586667rem;
+                    height:2.4rem;
                     margin-left:0.133333rem;
                 }
                 .carslist-tittle{
-                    width:2.233333rem;
+                   width:4.5rem;
                     margin-left:0.266667rem;
+                    font-size:0.373333rem;
                 }
                 .tittle{
                     margin-bottom:0.333333rem;
@@ -54,11 +59,11 @@
         }
         .coupon{
             display:flex;
-            height:0.76rem;
+            height:1.26rem;
             justify-content: space-between;
             align-items: center;
             margin-bottom:0.106667rem;
-            font-size:0.186667rem;
+            font-size:0.373333rem;
             background: #fff;
             li:nth-child(1){
                 padding-left:0.16rem;
@@ -75,11 +80,11 @@
         }
         .invoice{
             display:flex;
-            height:0.76rem;
+            height:1.26rem;
             justify-content: space-between;
             align-items: center;
             margin-bottom:0.106667rem;
-            font-size:0.186667rem;
+            font-size:0.373333rem;
             background: #fff;
             li:nth-child(1){
                 padding-left:0.16rem;
@@ -94,25 +99,27 @@
     }
     .l-present{
         display:flex;
-        height:0.666667rem;
+        height:1.26rem;
         justify-content:space-between;
         .present-l{
             width:3.36rem;
-            height:0.666667rem;
+            height:1.26rem;
             background:#fff;
-            line-height:0.666667rem;
+            line-height:1.26rem;
             text-align: center;
+            font-size:0.373333rem;
             .price1{
                 color:#EF541E;
             }
         }
         .present-r{
-            width:1.653333rem;
-            height:0.666667rem;
+            width:2.053333rem;
+            height:1.26rem;
             background:#FE5722;
-            line-height:0.666667rem;
+            line-height:1.26rem;
             text-align: center;
             color:#fff;
+            font-size:0.373333rem;
         }
     }
 }

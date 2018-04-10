@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RootRouter } from './router/router';
 import {FormsModule} from '@angular/forms';
+
 import { HttpModule } from '@angular/http';
 
 

@@ -11,7 +11,6 @@ import {ConfirmComponent} from '../components/confirm/confirm.component'
 import {PaymentComponent} from '../components/payment/payment.component'
 import {ZuixinComponent} from '../components/zuixin/zuixin.component'
 const routes: Routes = [
-    
     {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: 'home',component: HomeComponent
         children:[
