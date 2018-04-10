@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" id="vp"> 
   <title>Sonkwo</title>
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_587849_uvayuc87c9b2o6r.css" />
-  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="./assets/base.css">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!--   <link rel="stylesheet" href="./assets/base.css"> -->
+ <link  rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_620433_04zt4gm8ogrxusor.css"/>
 
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+  <script src="http://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 </head>
 <body>
   <app-root></app-root>
@@ -21,7 +23,7 @@
     var wd = document.documentElement.clientWidth * window.devicePixelRatio / 10;
     document.getElementsByTagName("html")[0].style.fontSize = wd + "px";
     var scale = 1 / window.devicePixelRatio;
-    // var mstr = 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no';
-    // document.getElementById("vp").content = mstr;
+    var mstr = 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no';
+    document.getElementById("vp").content = mstr;
 </script>
 </html>
