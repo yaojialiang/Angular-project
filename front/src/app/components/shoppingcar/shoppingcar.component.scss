@@ -1,19 +1,105 @@
-/* 
-* @Author: Marte
-* @Date:   2018-04-08 19:34:11
-* @Last Modified by:   Marte
-* @Last Modified time: 2018-04-08 19:34:11
-*/
+
 #shoppingcar{
     height:100%;
     display:flex;
     background-color:#F0F0F0;
     flex-direction:column;
     .header{
-        width: 100%;height:0.433333rem;background-color:#F6F6F6;
+        display:flex;
+        width: 100%;
+        height:0.473333rem;
+        align-items:center;
+        justify-content:space-between;
+        background:#666;
+        color:#fff;
+        font-size:0.213333rem;
+        border-bottom:1px solid #9C9C9C;
+        li:nth-child(3){
+            padding-right:0.106667rem;
+        }
+        li:nth-child(1){
+            padding-left:0.106667rem;
+        }
+    }
+    .headed-tabs{
+        display:flex;
+        height:0.526667rem;
+        background:#666;
+        color:#fff; 
+        align-items:center;
+        justify-content:space-around;
+        div{
+            width:1.0rem;
+            height:0.498667rem;
+            text-align:center;
+            line-height:0.498667rem;
+        }
+        div:hover{
+            color:#F25534;
+            border-bottom:2px solid #F25534;
+        }
     }
     .main{
-        width: 100%;flex:1;background-color:#FFFFFF;overflow-x:hidden;
-    
+        width: 100%;
+        flex:1;
+        background-color:#FFFFFF;
+        overflow-x:hidden;
+        .carslist{
+            li{
+                display:flex;
+                height:1.6rem;
+                border-bottom:0.04rem solid #F5F5F5;
+                justify-content:space-around;
+                align-items:center;
+                img{
+                    width:1.801667rem;
+                    height:1.206667rem;
+                }
+                .carslist-tittle{
+                    width:2.233333rem;
+                    margin-left:0.216667rem;
+                }
+                .tittle{
+                    margin-bottom:0.333333rem;
+                }
+                .price{
+                    color:#F14635;
+                }
+                input{
+                    width:0.4rem;
+                }
+            }
+        }
+    }
+    .carsFoot{
+        display:flex;
+        height:0.626667rem;
+        align-items:center;
+        justify-content:space-between;
+        background: #fff;
+        border-top:1px solid #ccc;
+        input{
+            margin-left:0.133333rem;
+        }
+        div:nth-child(2){
+            margin-right:0.26333rem;
+            margin-left:0.133333rem;
+            font-size:0.16rem;
+            .price{
+                color:#F14635;
+                margin-right:0.053333rem;
+            }
+            .freight{
+                color:#C1C1C1;
+            }
+        }
+       .goConfirm{
+            width:1.33333rem;
+            height:0.626667rem;
+            background:#ccc;
+            line-height:0.626667rem;
+            text-align:center;
+            color:#fff;
+        }
     }
 }

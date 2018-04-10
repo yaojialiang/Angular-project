@@ -1,5 +1,61 @@
 <div id="shoppingcar">
-    <div class='header'></div>
-    <div class='main'>购物车</div>
-    <app-footer [curr]="car"></app-footer>
+    <ul class='header'>
+        <li><i class="icon iconfont icon-xiangzuo"></i></li>
+        <li>购物车</li>
+        <li (click)="aa($event)">编辑</li>
+    </ul>
+    <div class="headed-tabs">
+        <div>游戏</div>
+        <div>周边</div>
+    </div>
+    <div class='main'>
+        <ul class="carslist">
+            <li>
+                <input type="checkbox" />
+                <img src="https://s1.sonkwo.com/FhzTWiBW-opJtYSQrWk8CH1Vmg9Z?imageMogr2/thumbnail/256" />
+                <div class="carslist-tittle">
+                    <p class="tittle">火星求生 第一殖民地版</p>
+                    <p class="price">￥200</p>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" />
+                <img src="https://s1.sonkwo.com/FhzTWiBW-opJtYSQrWk8CH1Vmg9Z?imageMogr2/thumbnail/256" />
+                <div class="carslist-tittle">
+                    <p class="tittle">先祖遗产</p>
+                    <p class="price">￥200</p>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" />
+                <img src="https://s1.sonkwo.com/FhzTWiBW-opJtYSQrWk8CH1Vmg9Z?imageMogr2/thumbnail/256" />
+                <div class="carslist-tittle">
+                    <p class="tittle">湍流</p>
+                    <p class="price">￥200</p>
+                </div>
+            </li>
+            <li>
+                <input type="checkbox" />
+                <img src="https://s1.sonkwo.com/FhzTWiBW-opJtYSQrWk8CH1Vmg9Z?imageMogr2/thumbnail/256" />
+                <div class="carslist-tittle">
+                    <p class="tittle">火星求生 第一殖民地版</p>
+                    <p class="price">￥200</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="carsFoot">
+        <input type="checkbox" />
+        <div>
+            <span>全选</span>
+            <span>总计:<span class="price">￥800.00</span><span class=" freight">(不含运费)</span></span>
+        </div>
+        <a routerLink="/confirm">
+            <div class="goConfirm">
+                去结算
+            </div>
+        </a>
+        
+    </div>
+    <app-footer></app-footer>
 </div>
