@@ -36,8 +36,18 @@
             width:80%;
             height:0.986667rem;
             background:#fff;
-            border-radius:5px;
+            border-radius:0.133333rem;
             margin:0.133333rem 0;
+            .itemtag{
+                float: left;
+                padding: 0.133333rem 0.266667rem;
+                margin:0.133333rem;
+                border-radius: 0.066667rem;
+                background: #ccc;
+                i{
+                    margin:0 0.266667rem;
+                } 
+            }
         }
         .item1{
             width:10%;
@@ -66,8 +76,10 @@
 
     .main{
         width: 100%;flex:1;background-color:#FFFFFF;overflow-x:hidden;
-        padding:0.506667rem;
+        padding-top:0.533333rem;
         .goodslist{
+            padding:0.4rem 0.333333rem;
+            border-top:1px solid #ccc;
             display: flex;
             .img{
                 img{
@@ -107,6 +119,7 @@
         .taglist{
             height: 100%;
             width: 80%;
+            margin-right:-80%;
             background: #343434;
             float: right;
             display: flex;
