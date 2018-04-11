@@ -13,15 +13,18 @@ export class ShoppingcarComponent implements OnInit {
     show:boolean=true;
     show1:boolean=false;
     dataset: Array<any>=[];
+    dataset1: Array<any>=[];
     ipt: Array<any>=[];
     allprice:number= null;
     qty:string = null;
-
 	constructor(private http :HttpclientService ,private router:Router) { }
 	ngOnInit() {
-        this.http.get('goods',{page:1,pageitems:3}).then((res)=>{
-          console.log(res);
-            this.dataset = res['data'];
+        let admin:string='admin';
+        this.http.get('sorder',{username:admin}).then((res)=>{
+          this.dataset1 = res['data'];
+             this.http.get('sgoods',{id:this.dataset1[1].goodsID}).then((res)=>{
+                 this.dataset = res['data'];
+             })
         })
 	}
   bianji($event:any){
@@ -37,19 +40,22 @@ export class ShoppingcarComponent implements OnInit {
     this.show1=false;
   }
   select(id:string,$event:any){
+    let a:any=window.document.getElementById('jiesuan');
     if($event.target.checked){
        this.ipt.push(id);
+       a.style.backgroundColor = '#f90'
      }else{
         this.ipt.splice(this.ipt.indexOf(id),1)
+        a.style.backgroundColor = '#ccc'
      }
       this.setcheck();
       this.sel();
-      this.bb();
   }
   setcheck(){
     let item:any=window.document.getElementById('check');
     if(this.ipt.length==this.dataset.length){
-        item.setAttribute('checked', 'true')
+      console.log(item);
+        item.getAttribute('checked',true);
     }else{
       item.removeAttribute('checked')
     }
@@ -57,10 +63,13 @@ export class ShoppingcarComponent implements OnInit {
   selectAll(){
     let item:any=window.document.getElementById('check');
     let arr:any=document.getElementsByClassName('check2');
+    let a:any=window.document.getElementById('jiesuan');
     if(item.getAttribute('checked')){
       item.removeAttribute('checked');
+      a.style.backgroundColor = '#ccc'
     }else{
       item.setAttribute('checked',true);
+       a.style.backgroundColor = '#f90'
     }
     if(item.getAttribute('checked')){
       this.ipt=[];
@@ -72,7 +81,6 @@ export class ShoppingcarComponent implements OnInit {
     }
     this.sea();
     this.sel();
-    this.bb();
   }
   sea(){
     let arr:any=document.getElementsByClassName('check2');
@@ -93,7 +101,7 @@ export class ShoppingcarComponent implements OnInit {
         this.ipt.forEach((item) => {
           this.dataset.forEach((item2) => {
             if(item2.id==item){
-              pr+=item2.price;
+              pr+=item2.price*1;
             }
           })
         })
@@ -103,25 +111,11 @@ export class ShoppingcarComponent implements OnInit {
     this.allprice=pr;
   }
   jiesuan(){
-    let a:any=window.document.getElementById('jiesuan')
     let arr:any=document.getElementsByClassName('check2');
     let item:any=window.document.getElementById('check');
-    this.bb();
      for(let i = 0;i<arr.length;i++){
      if(item.checked || arr[i].checked){
          this.router.navigate(['confirm']);
-      }
-    }
-  }
-  bb(){
-    let a:any=window.document.getElementById('jiesuan')
-    let arr:any=document.getElementsByClassName('check2');
-    let item:any=window.document.getElementById('check');
-    for(let i = 0;i<arr.length;i++){
-      if(item.checked || arr[i].checked){
-        a.style.backgroundColor = '#f90'
-      }else{
-        a.style.backgroundColor = '#ccc'
       }
     }
   }

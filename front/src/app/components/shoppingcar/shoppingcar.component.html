@@ -12,7 +12,7 @@
         <ul class="carslist" >
             <li *ngFor="let item of dataset">
                 <input type="checkbox" (click)="select(item.id,$event)" class="check2"/>
-                <img src="https://s1.sonkwo.com/FhzTWiBW-opJtYSQrWk8CH1Vmg9Z?imageMogr2/thumbnail/256" />
+                <img src="{{item.imgs}}"/>
                 <div class="carslist-tittle">
                     <p class="tittle">{{item.name}}</p>
                     <p class="price">￥{{item.price}}</p>
