@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 @Component({
   selector: 'app-shoppingcar',
   templateUrl: './shoppingcar.component.html',
@@ -11,13 +12,16 @@ export class ShoppingcarComponent implements OnInit {
     show1:boolean=false;
     dataset: Array<any>;
     ipt: Array<any>;
-	constructor(private http : Http) { }
+	constructor(private http : Http,private route: ActivatedRoute, private router: Router) { }
 
 	ngOnInit() {
         this.http.get('http://localhost:8080/goods?page=1&pageitems=1').subscribe((res)=>{
             this.dataset = res.json().data;
             console.log(this.dataset);
         })
+        this.route.params.subscribe((id) => {
+            console.log(id);
+        });
 	}
 
   bianji($event:any){

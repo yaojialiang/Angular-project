@@ -75,7 +75,7 @@
                         }
                         p{
 
-                            height: 1.513333rem;margin: 0;
+                            height: 0.513333rem;margin: 0;
                             text-align: center;line-height: 0.513333rem;margin-top: 0.3rem;font-size: 0.307rem;
                         }
                     }
@@ -87,12 +87,21 @@
             height: 1.366667rem;
             padding:0 0.626667rem;display:flex; align-items: center;
             .logo2{
-                width: 1.366667rem;height: 0.84rem;margin-right: 0.183333rem;   background: url("https://static.sonkwo.com/assets/mobile/menu_headline-84e3a965ae8140c60497d0a460dfd125ed7b9e624d88b9518136784462b45a4d.png") no-repeat;background-size: 1.366667rem;
+                width: 1.366667rem;height: 0.84rem;margin-right: 0.583333rem;   background: url("https://static.sonkwo.com/assets/mobile/menu_headline-84e3a965ae8140c60497d0a460dfd125ed7b9e624d88b9518136784462b45a4d.png") no-repeat;background-size: 1.366667rem;
             }
             .neirong{
-                height: 0.84rem;width: 7rem;line-height: 1.04rem;font-size: 0.30667rem;    overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
+                height: 0.84rem;width: 7rem;line-height: 1.04rem;font-size: 0.40667rem;position:relative;overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                ul{
+                    position:absolute;left:0;top:0;width: 7rem;
+                    li{
+                        height: 0.84rem;line-height: 1.14rem;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
             }
         }
         .changxiao{
@@ -136,12 +145,25 @@
             ul{
                 height: 0.84rem;border-bottom:1px solid #f5f5f5;
                 li{
-                    width: 20%;height: 100%;float: left;text-align: center;line-height: 0.84rem;
+                    width: 20%;height: 100%;float: left;text-align: center;line-height: 0.84rem;padding:0 0.213333rem;
+                    a{
+                        text-decoration: none;
+                        display:inline-block;
+                        width: 1.313333rem;height: 0.84rem;
+                    }
+                }
+                
+                .router-link-active {
+                    text-decoration: none;
                 }
             }
             .jumpmain{
                 height: 10.666667rem;
 
+            }
+            .active{
+                color: #ff5722;
+                border-bottom:0.021333rem solid #ff5722;
             }
         }
         

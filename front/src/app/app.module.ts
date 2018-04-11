@@ -20,6 +20,8 @@ import { RimComponent } from './src/app/component/rim/rim.component';
 import { ConfirmComponent } from './components/confirm/confirm.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { ZuixinComponent } from './components/zuixin/zuixin.component';
+import { CuxiaoComponent } from './components/cuxiao/cuxiao.component';
+import { AllclassComponent } from './components/allclass/allclass.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { ZuixinComponent } from './components/zuixin/zuixin.component';
     RimComponent,
     ConfirmComponent,
     PaymentComponent,
-    ZuixinComponent
+    ZuixinComponent,
+    CuxiaoComponent,
+    AllclassComponent
   ],
   imports: [
     BrowserModule,

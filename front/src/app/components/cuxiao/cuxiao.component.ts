@@ -1,22 +1,22 @@
-import { Component, OnInit ,Input} from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { Http } from '@angular/http';
 import { Router,ActivatedRoute,} from '@angular/router';
 @Component({
-  selector: 'app-zuixin',
-  templateUrl: './zuixin.component.html',
-  styleUrls: ['./zuixin.component.css']
+  selector: 'app-cuxiao',
+  templateUrl: './cuxiao.component.html',
+  styleUrls: ['./cuxiao.component.css']
 })
-export class ZuixinComponent implements OnInit {
+export class CuxiaoComponent implements OnInit {
     data:Array
-    id:number
   constructor(private http: Http, private router: Router,private route: ActivatedRoute) { }
 
   ngOnInit() {
-     this.http.get('http://10.3.136.33:8080/sgoods?hot=true').subscribe((res) => {
+         this.http.get('http://10.3.136.33:8080/sgoods?new=true').subscribe((res) => {
             res=res.json()
             this.data = res.data;
+            console.log(this.data)
+
         });
-      
   }
   chuanid($event){
     if($event.target.id){
@@ -28,6 +28,5 @@ export class ZuixinComponent implements OnInit {
     }
     this.router.navigate(['shoppingcar',this.id]));
   }
-
 
 }

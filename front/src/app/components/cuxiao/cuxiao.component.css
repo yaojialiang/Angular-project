@@ -11,7 +11,7 @@
     width: 50%;float: left;margin-left: 0.426667rem;height: 100%;}
 .name{font-size: 0.4rem;}
 .name span{display:inline;width: 0.533333rem;height: 0.426667rem;background-color: #ff5722;color:#fff;font-size: 0.32rem;}
-.leixing{padding: 0.32rem 0;
+.leixing{margin: 0.32rem 0;
 }
 .leixing span{display:inline;padding: 0.113333rem 0.1726667rem;background-color: #f5f5f5;color:#666;}
 .price{color:#ff5722;}
