@@ -9,15 +9,15 @@
             <h1></h1>
             <div>
                 <i class="iconfont icon-shouji"></i>
-                <input type="text" placeholder="请输入手机号/邮箱" />
+                <input type="text" placeholder="请输入手机号/邮箱" #user />
             </div>
             <div>
                 <i class="iconfont icon-jiesuo"></i>
-                <input type="text" placeholder="请输入密码" />
+                <input type="text" placeholder="请输入密码" #psw />
                 <i class="iconfont icon-yanjing"></i>
             </div>
             <div>登陆遇到问题？</div>
-            <button id="btn">登录</button>
+            <button id="btn" (click)="login(user,psw)">登录</button>
             <p>手机号快捷登录</p>
 
     </div>

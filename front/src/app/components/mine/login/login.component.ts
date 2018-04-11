@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'login',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+    constructor(private http: Http) { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        this.http.get('http://10.3.136.33:8080/adlgin?username=admin&password=admin').subscribe((res)=>{
+            console.log(res);
+        })
+    }
 
 }

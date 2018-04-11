@@ -1,19 +1,97 @@
-/* 
-* @Author: Marte
-* @Date:   2018-04-08 19:34:32
-* @Last Modified by:   Marte
-* @Last Modified time: 2018-04-08 19:34:32
-*/
+
 #mine{
     height:100%;
     display:flex;
     background-color:#F0F0F0;
     flex-direction:column;
     .header{
-        width: 100%;height:0.433333rem;background-color:#F6F6F6;
+        width: 100%;height:5rem;background-color:#34353A;
+        .head_t{
+            height:3rem;display:flex;align-items:center;
+            div:nth-child(1){
+                width: 2.366667rem;display:flex;justify-content:flex-end;
+                h1{
+                    width: 1.866667rem;height: 2.0rem;background:url('../../../assets/img/head.jpg') no-repeat;
+                }
+            }
+            div:nth-child(2){
+                flex:1;height:3.1rem;align-items:center;padding-left: 0.533333rem;padding-top:0.94rem;
+                h2{
+                    color:#F2F4F3;font-size:0.426667rem;position:relative;
+                    i{display:block;position:absolute;top: 0.1rem;right:1.1rem;width: 0.606667rem;height: 0.406667rem;background:url('../../../assets/img/class.jpg') no-repeat;background-size:contain;}
+                }
+                p{
+                    color:#A6A7AC;height: 0.533333rem;margin-top: 0.133333rem;font-size:0.306667rem;
+                }
+            }
+            div:nth-child(3){
+                color:#B9BABC;width: 2.366667rem;
+                .icon-youjiantou1{font-size:0.466667rem;}
+            }
+        }
+        .head_b{
+            height:2rem;display:flex;
+            div:nth-child(1){
+                width: 2.366667rem;color:#B0493A;padding-left: 0.4rem;padding-top: 0.50667rem;
+            }
+            div:nth-child(2){
+                flex:1;color:#7D7D85;padding-left: 1.9rem;padding-top: 0.50667rem;
+            }
+            div:nth-child(3){
+                width: 2.366667rem;color:#7D7D85;padding-left: 0.4rem;padding-top: 0.50667rem;
+            }
+        }
     }
     .main{
-        width: 100%;flex:1;background-color:#FFFFFF;overflow-x:hidden;
-    
+        width: 100%;flex:1;background-color:#FFFFFF;overflow-x:hidden;background-color:#F5F5F5;
+        .mt{
+            display:flex;justify-content:space-between;height: 1.146667rem;align-items:center;padding-left: 0.346667rem;padding-right: 0.346667rem;margin-bottom: 0.173333rem;background-color:#FFFFFF;
+            h3{font-size:0.4rem;color:#3C3C3C;}
+            span{font-size:0.54rem;color:#CDCDCD;}
+        }
+        .mb{
+            width: 100%;background-color:#FFFFFF;
+            ul{
+                display:flex;flex-wrap:wrap;
+                li{
+                    width: 25%;height: 2.666667rem;display:flex;flex-direction:column;justify-content:center;align-items:center;
+                    i{font-size:0.7rem;}
+                    .icon-dingdan{font-size:0.98rem;color:#7ED7F9;}
+                    .icon-1xinyuandan{
+                        font-size:0.78rem;color:#FF8185;
+                    }
+                    .icon-youhuiquan{
+                        color:#FFE06C;
+                    }
+                    .icon-shoucang{
+                        color:#AD84EE;font-size:0.8rem;
+                    }
+                    .icon-emotion{
+                        color:#FFBA5E;
+                    }
+                    .icon-message{
+                        color:#83DD6C;font-size:0.9rem;
+                    }
+                    .icon-xiaozu{
+                        color:#7FAFFB;font-size:0.9rem;
+                    }
+                    .icon-youxi{
+                        color:#7BB2F5;font-size:0.8rem;
+                    }
+                    .icon-jibenxinxi{
+                        color:#9F92FE;
+                    }
+                    .icon-lock{
+                        color:#FED94D;font-size:0.8rem;
+                    }
+                    .icon-dingwei{
+                        color:#FF7D84;font-size:0.98rem;
+                    }
+                    .icon-guanyuwomen{
+                        color:#71E3CA;font-size:0.8rem;
+                    }
+                }
+            }
+        }
     }
 }

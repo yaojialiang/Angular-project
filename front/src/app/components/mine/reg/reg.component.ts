@@ -14,9 +14,9 @@ export class RegComponent implements OnInit {
     ngOnInit() {
     }
 
+    regstr: boolean=false
 
-
-    获取随机验证码
+    // 获取随机验证码
     getCode(){
         let arr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
         let vCode = '';
@@ -44,18 +44,20 @@ export class RegComponent implements OnInit {
 
 
     getPhone(){
-        // if(!/^1[34578]\d{9}$/.test($('.phone').val())){
-        //     console.log($('.phone').parent('p'));
-        //     $('.phone').parent('p').css('display','block');
+        if(!/^1[34578]\d{9}$/.test($('.ip1').val())){
+            console.log($('.ip1').val()));
+            // $('.phone').parent('p').css('display','block');
+            this.regstr=true;
 
-        // }else{
-        //     $('.phone').parent('p').css('display','none');
-        // }
-        let phoneReg = /^1[34578]\d{9}$/g;
-        if($('.ip1').val().length<1){
-            // alert('手机号码不能为空');
-            $('.phone').parent('p').css('display','none').text('手机号码不能为空');
+        }else{
+            this.regstr=false;
+            // $('.phone').parent('p').css('display','none');
         }
+        // let phoneReg = /^1[34578]\d{9}$/g;
+        // if($('.ip1').val().length<1){
+        //     // alert('手机号码不能为空');
+        //     $('.phone').parent('p').css('display','none').text('手机号码不能为空');
+        // }
     }
 
 

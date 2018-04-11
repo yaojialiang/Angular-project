@@ -9,7 +9,7 @@
         <div>
             <i class="iconfont icon-shouji"></i>
             <input type="text" placeholder="请输入手机号" class="ip1" (blur)="getPhone()" />
-            <p>
+            <p *ngIf="regstr">
                 <span class="phone">您输入的手机号格式不正确</span>
                 <i class="arrow"></i>
             </p>

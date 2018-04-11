@@ -11,10 +11,141 @@
     background-color:#F0F0F0;
     flex-direction:column;
     .header{
-        width: 100%;height:0.433333rem;background-color:#F6F6F6;
+        height:1.68rem;background-color:#333333;
+        display:flex;justify-content:space-between;
+        padding:0 0.213333rem;
+        .youxi{
+            background-color: #ccc;color:#333;
+        }
+        i{
+            font-size: 0.63333rem;color:#CCCCCC;line-height: 1.53333rem;padding: 0 0.113333rem;
+        }
+        div{height: 0.833333rem;margin-top: 0.413333rem;width: 5.066667rem;text-align: center;border:1px solid #ccc;color:#ccc;line-height: 0.8333333rem;display:flex;
+            span{display:inline-block;width: 50%;height: 100%;}
+        }
+
     }
     .main{
-        width: 100%;flex:1;background-color:#FFFFFF;overflow-x:hidden;
-    
+        flex:1;background-color:#FFFFFF;overflow-x:hidden;
+        #myCarousel{
+            height: 5.4rem;
+            .carousel-inner{
+                height: 100%;
+                div{height: 100%;
+                img{width: 100%;height: 100%;}
+                }
+                
+            }
+            }
+        #huodong{
+            height: 2.5rem;
+            ul{
+                height: 100%;margin: 0;
+                li{
+                    width: 25%;
+                    height: 100%;float: left;padding:0.3rem 0.163333rem 0 0.163333rem ;
+                    a{display:block;width: 1.58667rem;height: 100%;margin: 0 auto;
+                        .imgs1{
+                            width: 85%;
+                            margin-left:0.083333rem ;
+                            height: 60%;
+                            background: url("https://static.sonkwo.com/assets/mobile/menu_activitiy-8c334beeee30ee9eaaefdea84c349a598ba3bfa1a31c8abe0624d8cb1534c97f.png") no-repeat;
+                            background-size: 1.3rem;
+                                }
+                        .imgs2{
+                            width: 85%;
+                            margin-left:0.083333rem ;
+                            height: 60%;
+                            background:url("https://static.sonkwo.com/assets/mobile/menu_benefit-4f5bf8607c4a7b73bd9169afbf9559ccd8ee9da439af459ad5b6cdedac9a3b0a.png") no-repeat;
+                            background-size: 1.3rem;
+                        }
+                        .imgs3{
+                           width: 85%;
+                            margin-left:0.083333rem ;
+                            height: 60%;
+                            background:url("https://static.sonkwo.com/assets/mobile/menu_peripheral-1d3dfedc2984b49afd24429faf9f857261caf2d8d2249cc747e9cb753be0124b.png") no-repeat;
+                            background-size: 1.3rem;
+                        }
+                        .imgs4{
+                            width: 85%;
+                            margin-left:0.083333rem ;
+                            height: 60%;
+                            background:url("https://static.sonkwo.com/assets/mobile/menu_publisher-707dd69bd571101da2f92de7003da046abc36a695d8a1e1da0858c953cb3d4ec.png") no-repeat;
+                            background-size: 1.3rem;
+                        }
+                        p{
+
+                            height: 1.513333rem;margin: 0;
+                            text-align: center;line-height: 0.513333rem;margin-top: 0.3rem;font-size: 0.307rem;
+                        }
+                    }
+
+                }
+            }
+        }
+        .toutiao{
+            height: 1.366667rem;
+            padding:0 0.626667rem;display:flex; align-items: center;
+            .logo2{
+                width: 1.366667rem;height: 0.84rem;margin-right: 0.183333rem;   background: url("https://static.sonkwo.com/assets/mobile/menu_headline-84e3a965ae8140c60497d0a460dfd125ed7b9e624d88b9518136784462b45a4d.png") no-repeat;background-size: 1.366667rem;
+            }
+            .neirong{
+                height: 0.84rem;width: 7rem;line-height: 1.04rem;font-size: 0.30667rem;    overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+        .changxiao{
+            height: 4.696667rem;
+            .dianzi{
+                height: 0.263333rem;background-color: #F5F5F5;
+            }
+            .changxiaoname{
+                height: 0.966667rem;
+                 padding:0 0.626667rem;line-height:0.966667rem;font-size: 0.463333rem;font-weight: bold;
+            }
+            .changxiaomain:-webkit-scrollbar {
+                display: none;
+            }
+            .changxiaomain{
+                height: 3.2rem;overflow-y: scroll;
+                ul{
+                    width: 18.5rem;height: 100%;padding:0 0.626667rem;
+                    li{
+                        width: 20%;height: 100%;float: left;
+                        
+                        .changxiaoimg{
+                            width: 3.2rem;height: 2.12rem;
+                            img{
+                                width: 100%;height: 100%;
+                            }
+                            .changxiaotitle{
+                                height: 0.44rem;line-height:0.44rem; font-size: 0.333333rem;margin-top: 0.10333rem;
+                            }
+                            .changxiaoprice{
+                                height: 0.24rem;line-height:0.24rem; font-size: 0.23333rem;margin-top: 0.10333rem;font-weight: bold;color:#FF6A3C;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        .jump{
+            min-height: 4.266667rem;
+            ul{
+                height: 0.84rem;border-bottom:1px solid #f5f5f5;
+                li{
+                    width: 20%;height: 100%;float: left;text-align: center;line-height: 0.84rem;
+                }
+            }
+            .jumpmain{
+                height: 10.666667rem;
+
+            }
+        }
+        
+
+        
     }
 }
