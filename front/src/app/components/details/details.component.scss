@@ -5,26 +5,29 @@
 	height: 100%;
 	.swiper-container {
 	    width: 100%;
-	    height: 2.933333rem;
+	    height: 4.666667rem;
 	} 
 	.header{
 		display: flex;
 		justify-content: space-between;
-		height: 0.666667rem;
+		height: 1.466667rem;
 		background: #343434;
 		align-items: center;
 
 		.item1{
 			width: 30%;
 			color:#fff;
-			font-size:0.32rem;
-			padding-left:0.133333rem;
+			i{
+				font-size:0.533333rem;
+			}
+			
+			padding-left:0.48rem;
 		}
 		.conserch{
 			width: 40%;
 			/*background: #CBCBCB;*/
-			border:1px solid #CBCBCB;
-			height: 0.533333rem;
+			border:0.026667rem solid #CBCBCB;
+			height: 1.066667rem;
 			border-radius: 0.053333rem;
 			display: flex;
 			padding: 1px;
@@ -34,7 +37,7 @@
 				align-items: center;
 				width: 50%;
 				background: #343434;
-				font-size: 0.186667rem;
+				font-size: 0.346667rem;
 				color: #CBCBCB;
 				height: 100%;
 			}
@@ -46,9 +49,10 @@
 		.item2{
 			width: 30%;
 			color:#fff;
-			font-size: 0.32rem;
-			padding-right: 0.133333rem;
-			i{
+			
+			padding-right:0.4rem;
+			i{	
+				font-size: 0.533333rem;
 				float: right;
 			}
 		}
@@ -57,31 +61,125 @@
 		height: 100%;
 		flex: 1;
 		display: flex;
+		flex-direction: column;
+		background: #F5F5F5;
+		overflow-x:hidden;
 		.swiper-slide{
 			img{
 				width: 100%;
 				height: 100%;
 			}
 		}
+		.swiper-container{
+			overflow:visible;
+		}
 		.swiper-wrapper{
+			.swiper-slide{
+				position: relative;
+				span{
+					position: absolute;
+					right:0.266667rem;
+					bottom:0.466667rem;
+					color:#fff;
+					padding:0.133333rem 0.466667rem;
+					background: rgba(0,0,0,0.2);
+				}
+			}
+		}
+		.game{
+			height: 4.0rem;
+			background: #fff;
+			padding-left:0.4rem;
+			padding-top:0.266667rem;
+			p{
+				line-height: 0.8rem
+			}
+			.name{
+				font-size: 0.48rem;
+			}
+			.nickname{
+				margin-bottom:0.266667rem;
+				color:#A1A1A1;
+			}
+			.price{
+				font-size: 0.48rem;
+				color:#F65819;
+			}
+			.label{
+				color:#A1A1A1;
+			}
+		}
+		.game_item1{
+			height: 1.733333rem;
+			background: #fff;
+			margin-top:3%;
+			padding-left:0.266667rem; 
+			span{
+				font-size: 0.426667rem;
+				line-height: 1.733333rem;
+				a{
+					color:#A1A1A1;
+				}
+			}
+			i{
+				font-size: 0.666667rem;
+				float: right;
+				line-height: 1.733333rem;
+				margin-right:0.266667rem;
+			}
+		}
+		.game_bto{
+			margin-top:3%;
+			background: #fff;
 			
-			transition: margin-left 0.5s ease-in-out;
+			.tag{
+				display: flex;
+				background: #fff;
+				height: 1.28rem;
+				border-bottom: 0.026667rem solid #ccc;
+				position: relative;
+				span{
+					margin:0 0.4rem;
+					flex: 1;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					
+				}
+				.ac{
+					color:#F74E2D;
+				}
+			}
+			.tag_move{
+				height:0.106667rem;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				span{
+					display: block;
+					height: 100%;
+					background: #FF5E16;
+					width: 29%;
+					margin-left:2%;
+				}
+			}
+
 		}
 		
 	}
 	.footer{
 		display: flex;
-		height: 0.666667rem;
+		height: 1.466667rem;
 		border-top:1px solid #ccc;
 		div{
-			font-size: 0.186667rem;
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
 			align-items: center;
 			border-right:1px solid #ccc;
 			i{
-				font-size: 0.32rem;
+				font-size: 0.666667rem;
 			}
 		}
 	}

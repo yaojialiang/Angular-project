@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RootRouter } from './router/router';
-
+import {HttpModule} from '@angular/http';
+import {HttpclientService} from './services/httpclient.service'
+import {SpringService} from './services/spring.service'
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -16,6 +18,9 @@ import { DetailsComponent } from './components/details/details.component';
 import { RimComponent } from './src/app/component/rim/rim.component';
 import { ConfirmComponent } from './components/confirm/confirm.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { SearchComponent } from './components/details/search/search.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { SpinnerCarComponent } from './components/spinner-car/spinner-car.component';
 
 
 @NgModule({
@@ -32,13 +37,17 @@ import { PaymentComponent } from './components/payment/payment.component';
     DetailsComponent,
     RimComponent,
     ConfirmComponent,
-    PaymentComponent
+    PaymentComponent,
+    SearchComponent,
+    SpinnerComponent,
+    SpinnerCarComponent
   ],
   imports: [
     BrowserModule,
-    RootRouter
+    RootRouter,
+    HttpModule
   ],
-  providers: [],
+  providers: [HttpclientService,SpringService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

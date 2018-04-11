@@ -7,9 +7,8 @@ import { ShoppingcarComponent } from '../components/shoppingcar/shoppingcar.comp
 import { MineComponent } from '../components/mine/mine.component'
 import {DetailsComponent} from '../components/details/details.component'
 import {ConfirmComponent} from '../components/confirm/confirm.component'
-
 import {PaymentComponent} from '../components/payment/payment.component'
-
+import {SearchComponent} from '../components/details/search/search.component'
 const routes: Routes = [
     
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -20,7 +19,8 @@ const routes: Routes = [
     {path: 'mine',component: MineComponent},
     {path: 'details/:id',component: DetailsComponent},
     {path: 'confirm',component: ConfirmComponent},
-    {path: 'payment',component: PaymentComponent}
+    {path: 'payment',component: PaymentComponent},
+    {path: 'gamesearch',component: SearchComponent}
 ]
 
 export const RootRouter = RouterModule.forRoot(

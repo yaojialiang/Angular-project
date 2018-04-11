@@ -1,0 +1,92 @@
+#gamesearch{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	
+	.header{
+		height: 1.466667rem;
+		background: #343434;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.search_in{
+			width: 80%;
+			height: 70%;
+			border-radius: 0.266667rem;
+			background: #fff;
+			font-size: 0.426667rem;
+		}
+		.search_for{
+			display: flex;
+			justify-content: center;
+			width: 10%;
+			color:#fff;
+			margin-left:2%;
+			position:relative;
+			i{
+				position: absolute;
+				right: 150%;
+				top: 10%;
+				color:#000;
+				font-size:0.346667rem;
+			}
+		}
+	}
+	.main{
+		height: 100%;
+		position: relative;
+		.searchhis{
+			height: 1.333333rem;
+			border-bottom: 1px solid #ccc;
+			padding-left:0.906667rem;
+			display: flex;
+			align-items: center;
+			color:#444;
+			position: relative;
+			i{
+				position: absolute;
+				right:10%;
+				top:49%;
+			}
+		}
+		.goodslist{
+			padding:0.4rem 0.333333rem;
+			border-top:1px solid #ccc;
+			display: flex;
+			.img{
+			    img{
+			        width: 4.266667rem;
+			        height:3.066667rem;
+			        display: inline;
+			    }
+			}
+			.con{
+			    display: flex;
+			    justify-content:space-between;
+			    flex-direction: column;
+			    font-size: 0.426667rem;
+			    margin:0 0.133333rem;
+			    .label{
+			        font-size: 0.32rem;
+			        color:#999;
+			        span{
+			            padding: 0.133333rem;
+			            background: #F5F5F5;
+			        }
+			    }
+			    .price{
+			        font-weight: 600;
+			        color: #F8572B;
+			    }
+			}
+		}
+		.wen{
+			position: absolute;
+			bottom:40%;
+			color:#999;
+			display: flex;
+			justify-content: center;
+			width: 100%;
+		}
+	}
+}
