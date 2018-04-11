@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RootRouter } from './router/router';
+import {FormsModule} from '@angular/forms';
+
 import { HttpModule } from '@angular/http';
 import {HttpclientService} from '../app/services/httpclient.service'
 import { AppComponent } from './app.component';
@@ -16,6 +18,7 @@ import { DetailsComponent } from './components/details/details.component';
 import { RimComponent } from './src/app/component/rim/rim.component';
 import { ConfirmComponent } from './components/confirm/confirm.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { ZuixinComponent } from './components/zuixin/zuixin.component';
 
 
 @NgModule({
@@ -32,11 +35,13 @@ import { PaymentComponent } from './components/payment/payment.component';
     DetailsComponent,
     RimComponent,
     ConfirmComponent,
-    PaymentComponent
+    PaymentComponent,
+    ZuixinComponent
   ],
   imports: [
     BrowserModule,
     RootRouter,
+    FormsModule, 
     HttpModule
   ],
   providers: [HttpclientService],
