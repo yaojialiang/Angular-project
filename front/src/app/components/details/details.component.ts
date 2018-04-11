@@ -127,6 +127,8 @@ export class DetailsComponent implements OnInit {
 				console.log(res)
 			})
 			console.log(username,goodsID);
+		}else{
+			this.router.navigate(['/login/']);
 		}
 	}
 	tal(val){
