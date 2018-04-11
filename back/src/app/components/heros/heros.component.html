@@ -1,0 +1,25 @@
+<div>
+	<table *ngIf="Hero">
+		<th *ngFor="let key of getKeys(Hero[0])">
+			<p *ngIf="columns.indexOf(key) > -1">
+				{{key}}
+			</p>
+			
+		</th>
+		<tbody>
+			<tr *ngFor="let obj of Hero" (click)="getData(obj.title)">
+				<td *ngFor="let key of getKeys(obj)" >
+					<span *ngIf="key == 'nickname'">
+						{{obj[key]}}
+					</span>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<ul class="pages">
+		<li *ngFor="let val of (Pages | range:5)||[];let idx=index">
+			<span (click)="ac(idx)" [class.hight]="high.indexOf(idx) > -1">{{val+1}}</span>
+		</li>
+	</ul>
+	<app-hero *ngIf="Data" [dataset]="Data"></app-hero>
+</div>

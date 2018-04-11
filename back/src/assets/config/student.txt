@@ -1,0 +1,6 @@
+{
+    "cols": "id,name,nickname,make,ap,size,price,title",
+    "filterCols": "id,sales",
+    "hideCols": "id",
+    "pageItems":"10"
+}

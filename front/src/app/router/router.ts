@@ -7,6 +7,7 @@ import { ShoppingcarComponent } from '../components/shoppingcar/shoppingcar.comp
 import { MineComponent } from '../components/mine/mine.component'
 
 const routes: Routes = [
+    {path: '' component:HomeComponet }
     {path: 'home',component: HomeComponent},
     {path: 'community',component: CommunityComponent},
     {path: 'headlines',component: HeadlinesComponent},
