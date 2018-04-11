@@ -1,0 +1,84 @@
+<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_620841_oxj8ok00robnjyvi.css">
+<div id="community">
+    <div class='header'>
+    	<div class="item1">
+    		<i class="iconfont icon-jiantou3"></i>
+    	</div>
+    	<div class="conserch"></div>
+    	<div class="item2">
+    		<i class="iconfont icon-qunfengxiaoxitishilingdang"></i>
+    	</div>
+    	<div class="tag">
+    		<div style="color:#F84E34">全部商品</div><div (click)="maskshow($event)">筛选<i class="iconfont icon-paixujiantouxia"></i></div>
+    	</div>
+    </div>
+    <div class='main'>
+    	<div class="goodslist">
+    		<div class="img">
+    			<img src="https://s1.sonkwo.com/FjLzSGxF8lLm3a8Wqlcq8kjqkbr3?imageMogr2/thumbnail/256">
+    		</div>
+    		<div class="con">
+    			<p>街霸 30周年纪念合集</p>
+    			<p class="label">
+    				<span>动作</span>
+    				<span>格斗</span>
+    				<span>日系</span>
+    			</p>
+    			<p class="price">￥<span>209.0</span></p>
+    		</div>
+    	</div>
+	</div>
+	<div class="mask" *ngIf="show" (click)="s_h($event)">
+		<div class="taglist">
+			<div class="top">
+				类型
+			</div>
+			<div class="cen" (click)="settag($event)">
+				<div class="cen_lei">
+					<div class="cen_item"><span class="ac">动作</span><span>射击</span><span>策略</span></div>
+					<div class="cen_item"><span>角色扮演</span><span>模拟</span><span>竞速</span></div>
+					<div class="cen_item"><span>体育</span><span>休闲</span><span>冒险</span></div>
+					<div class="cen_item"><span>格斗</span><span>即时策略</span><span>像素风</span></div>
+
+					<div class="cen_item"><span>动作</span><span>射击</span><span>策略</span></div>
+					<div class="cen_item"><span>战争</span><span>益智</span><span>回合</span></div>
+					<div class="cen_item"><span>解密</span><span>剧情</span><span>科幻</span></div>
+					<div class="cen_item"><span>多人</span><span>第一人称</span><span>历史</span></div>
+
+					<div class="cen_item"><span>家庭</span><span>4X</span><span>开放世界</span></div>
+					<div class="cen_item"><span>角色扮演</span><span>模拟</span><span>竞速</span></div>
+					<div class="cen_item"><span>悬疑</span><span>经营</span><span>日系</span></div>
+					<div class="cen_item"><span>单机</span><span>多人</span><span>第三人称</span></div>
+
+					<div class="cen_item"><span>赛博朋克</span><span>恐怖</span><span>飞行</span></div>
+				</div>
+				<p class="tagss">热门标签</p>
+				<div class="cen_lei">
+					<div class="cen_item"><span>预售游戏</span><span>新品游戏</span><span>促销游戏</span></div>
+				</div>
+				<p class="tagss">语言</p>
+				<div class="cen_lei">
+					<div class="cen_item"><span>简体中文</span><span>繁体中文</span><span>中文语...</span></div>
+					<div class="cen_item"><span>英文</span><span></span><span></span></div>
+				</div>
+				<p class="tagss">系统</p>
+				<div class="cen_lei">
+					<div class="cen_item"><span>Win</span><span>Linux</span><span>Mac</span></div>
+				</div>
+				<p class="tagss">价格</p>
+				<div class="cen_lei">
+					<div class="cen_item"><span>免费</span><span>10元以下</span><span>10-50元</span></div>
+					<div class="cen_item"><span>50-100元</span><span>100元以上</span><span></span></div>
+				</div>
+				<p class="tagss">类别</p>
+				<div class="cen_lei">
+					<div class="cen_item"><span>本体游戏</span><span>捆绑包</span><span>DLC</span></div>
+				</div>
+			</div>
+			<div class="bto">
+				<div style="background: #4D4D4D">重置</div><div style="background: #FE5722">确定</div>
+			</div>
+		</div>
+	</div>
+    <app-footer [curr]="fenlei"></app-footer>
+</div>

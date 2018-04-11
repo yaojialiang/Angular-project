@@ -1,0 +1,19 @@
+<div *ngFor='let obj of data' id={{obj.id}} class="jumpshangpin">
+        <div class="jumpimgs">
+            <img src="{{obj.imgs.split(',')[0]}}"/>
+        </div>
+        <div class="jumpname">
+            <div class="name">
+                <span>促销</span>
+                {{obj.name}}
+            </div>
+            <div class="leixing">
+               <span>{{obj.label}}</span>
+            </div>
+            <div class="price">
+                ￥{{obj.price}}
+            </div>
+        </div>
+</div>
+
+
