@@ -2,8 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RootRouter } from './router/router';
 import { HttpModule } from '@angular/http';
-
-
+import {HttpclientService} from '../app/services/httpclient.service'
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -40,7 +39,7 @@ import { PaymentComponent } from './components/payment/payment.component';
     RootRouter,
     HttpModule
   ],
-  providers: [],
+  providers: [HttpclientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
