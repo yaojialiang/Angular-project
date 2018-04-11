@@ -1,10 +1,16 @@
-<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_620841_oxj8ok00robnjyvi.css">
+<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_620841_atsfgh68raxos9k9.css">
+<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_623473_zkszi9x2ec1eb3xr.css">
 <div id="community">
     <div class='header'>
     	<div class="item1">
-    		<i class="iconfont icon-jiantou3"></i>
+    		<i class="iconfont icon-web__jiantou_zuo"></i>
     	</div>
-    	<div class="conserch"></div>
+    	<div class="conserch" (click)="toSearch()">
+    		<div *ngIf="gametag" class="itemtag" (click)="clostag($event)">
+    			{{gametag}}
+    			<i class="iconfont icon-untitled94"></i>
+    		</div>
+    	</div>
     	<div class="item2">
     		<i class="iconfont icon-qunfengxiaoxitishilingdang"></i>
     	</div>
@@ -12,24 +18,22 @@
     		<div style="color:#F84E34">全部商品</div><div (click)="maskshow($event)">筛选<i class="iconfont icon-paixujiantouxia"></i></div>
     	</div>
     </div>
-    <div class='main'>
-    	<div class="goodslist">
+    <div class='main' >
+    	<div class="goodslist" *ngFor="let item of dataset" (click)="getid(item.id)">
     		<div class="img">
-    			<img src="https://s1.sonkwo.com/FjLzSGxF8lLm3a8Wqlcq8kjqkbr3?imageMogr2/thumbnail/256">
+    			<img [src]="item.cover" class="setimg">
     		</div>
     		<div class="con">
-    			<p>街霸 30周年纪念合集</p>
+    			<p>{{item.name}}</p>
     			<p class="label">
-    				<span>动作</span>
-    				<span>格斗</span>
-    				<span>日系</span>
+    				<span>{{item.label}}</span>
     			</p>
-    			<p class="price">￥<span>209.0</span></p>
+    			<p class="price">￥<span>{{item.price}}</span></p>
     		</div>
     	</div>
 	</div>
-	<div class="mask" *ngIf="show" (click)="s_h($event)">
-		<div class="taglist">
+	<div class="mask" [style.display]="show" (click)="s_h($event)" >
+		<div class="taglist" id="taglist">
 			<div class="top">
 				类型
 			</div>
@@ -76,7 +80,7 @@
 				</div>
 			</div>
 			<div class="bto">
-				<div style="background: #4D4D4D">重置</div><div style="background: #FE5722">确定</div>
+				<div style="background: #4D4D4D">重置</div><div style="background: #FE5722" (click)="s_h($event)" class="ok">确定</div>
 			</div>
 		</div>
 	</div>
