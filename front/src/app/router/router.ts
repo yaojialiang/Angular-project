@@ -9,14 +9,20 @@ import {DetailsComponent} from '../components/details/details.component'
 import {ConfirmComponent} from '../components/confirm/confirm.component'
 import {PaymentComponent} from '../components/payment/payment.component'
 import {SearchComponent} from '../components/details/search/search.component'
+import {ZuixinComponent} from '../components/zuixin/zuixin.component'
 const routes: Routes = [
-    
     {path: '', redirectTo: '/home', pathMatch: 'full'},
-    {path: 'home',component: HomeComponent},
+    {path: 'home',component: HomeComponent,
+        children:[
+            {path:'zuixin',component:ZuixinComponent}
+        ]
+    },
     {path: 'community',component: CommunityComponent},
     {path: 'headlines',component: HeadlinesComponent},
     {path: 'shoppingcar',component: ShoppingcarComponent},
     {path: 'mine',component: MineComponent},
+    {path: 'confirm',component: ConfirmComponent},
+    {path: 'payment',component: PaymentComponent},
     {path: 'details/:id',component: DetailsComponent},
     {path: 'confirm',component: ConfirmComponent},
     {path: 'payment',component: PaymentComponent},

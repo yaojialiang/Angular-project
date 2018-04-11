@@ -5,6 +5,7 @@ import {HttpModule} from '@angular/http';
 import {HttpclientService} from './services/httpclient.service'
 import {SpringService} from './services/spring.service'
 
+import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -21,6 +22,7 @@ import { PaymentComponent } from './components/payment/payment.component';
 import { SearchComponent } from './components/details/search/search.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SpinnerCarComponent } from './components/spinner-car/spinner-car.component';
+import { ZuixinComponent } from './components/zuixin/zuixin.component';
 
 
 @NgModule({
@@ -38,16 +40,21 @@ import { SpinnerCarComponent } from './components/spinner-car/spinner-car.compon
     RimComponent,
     ConfirmComponent,
     PaymentComponent,
+
     SearchComponent,
     SpinnerComponent,
-    SpinnerCarComponent
+    SpinnerCarComponent,
+    ZuixinComponent
   ],
   imports: [
     BrowserModule,
     RootRouter,
     HttpModule
   ],
-  providers: [HttpclientService,SpringService],
+  providers: [HttpclientService,SpringService,
+    FormsModule, 
+    HttpModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
