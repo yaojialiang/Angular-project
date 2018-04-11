@@ -17,14 +17,20 @@ export class ShoppingcarComponent implements OnInit {
     ipt: Array<any>=[];
     allprice:number= null;
     qty:string = null;
+
 	constructor(private http :HttpclientService ,private router:Router) { }
 	ngOnInit() {
         let admin:string='admin';
         this.http.get('sorder',{username:admin}).then((res)=>{
           this.dataset1 = res['data'];
-             this.http.get('sgoods',{id:this.dataset1[1].goodsID}).then((res)=>{
-                 this.dataset = res['data'];
-             })
+          console.log(this.dataset1);
+          for(var i=0;i<this.dataset1.length;i++){
+              this.http.get('sgoods',{id:this.dataset1[i].goodsID}).then((res)=>{
+                console.log(res)
+                  this.dataset.push(res['data'][0]);
+              })
+          }
+          console.log(this.dataset)   
         })
 	}
   bianji($event:any){
@@ -54,8 +60,7 @@ export class ShoppingcarComponent implements OnInit {
   setcheck(){
     let item:any=window.document.getElementById('check');
     if(this.ipt.length==this.dataset.length){
-      console.log(item);
-        item.getAttribute('checked',true);
+        item.setAttribute('checked',true);
     }else{
       item.removeAttribute('checked')
     }
