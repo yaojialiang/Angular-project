@@ -95,7 +95,7 @@ export class DetailsComponent implements OnInit {
 	}
 	back(){
 	
-		this.router.navigate(['/community/']);
+		this.router.navigate(['/community/0']);
 	}
 	ngOnInit() {
 		let id:number
@@ -140,7 +140,7 @@ export class DetailsComponent implements OnInit {
 	nowbuy(){
 		window.localStorage.setItem('carlist',JSON.stringify(this.dataset));
 		this.backurl.backhis='details';
-		this.router.navigate(['/payment/']);
+		this.router.navigate(['/confirm/']);
 	}
 	sellist(){
 		this.selitem=!this.selitem;
