@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-
+import * as $ from 'jquery';
 import {HttpclientService} from '../../services/httpclient.service'
 @Component({
   selector: 'app-shoppingcar',
@@ -9,115 +9,109 @@ import {HttpclientService} from '../../services/httpclient.service'
   styleUrls: ['./shoppingcar.component.scss']
 })
 export class ShoppingcarComponent implements OnInit {
-	car:string='car'
+  car:string='car'
     show:boolean=true;
-    show1:boolean=false;
     dataset: Array<any>=[];
     dataset1: Array<any>=[];
     ipt: Array<any>=[];
-    allprice:number= null;
+    allprice:number= 0;
     qty:string = null;
-	constructor(private http :HttpclientService ,private router:Router) { }
-	ngOnInit() {
+    taslk:string = '';
+    taslkshow:Boolean = false;
+
+  constructor(private http :HttpclientService ,private router:Router) { }
+  ngOnInit() {
         let admin:string='admin';
         this.http.get('sorder',{username:admin}).then((res)=>{
+          console.log(res)
           this.dataset1 = res['data'];
-             this.http.get('sgoods',{id:this.dataset1[1].goodsID}).then((res)=>{
-                 this.dataset = res['data'];
-             })
+          if(res['data'].length>0){
+            for(let i=0;i<this.dataset1.length;i++){
+                this.http.get('sgoods',{id:this.dataset1[i].goodsID}).then((res)=>{
+                    let id:number = this.dataset1[i]['id']
+                    res['data'][0]['orderID']=id;
+                    this.dataset.push(res['data'][0]);
+                })
+            }
+          }
+          console.log(this.dataset)
         })
-	}
-  bianji($event:any){
-    $event.target.style.display="none"
-    $event.target.nextSibling.style.display="block"
-    this.show1=true;
-    this.show=false;
   }
-  wancheng($event:any){
-    $event.target.previousSibling.style.display="block"
-    $event.target.style.display="none"
-    this.show = true;
-    this.show1=false;
-  }
-  select(id:string,$event:any){
-    let a:any=window.document.getElementById('jiesuan');
-    if($event.target.checked){
-       this.ipt.push(id);
-       a.style.backgroundColor = '#f90'
-     }else{
-        this.ipt.splice(this.ipt.indexOf(id),1)
-        a.style.backgroundColor = '#ccc'
-     }
-      this.setcheck();
-      this.sel();
-  }
-  setcheck(){
-    let item:any=window.document.getElementById('check');
-    if(this.ipt.length==this.dataset.length){
-      console.log(item);
-        item.getAttribute('checked',true);
+  checkall(event: any){
+    let n:number = this.dataset.length;
+    if(n == this.ipt.length){
+      this.ipt=[];
     }else{
-      item.removeAttribute('checked')
-    }
-  }
-  selectAll(){
-    let item:any=window.document.getElementById('check');
-    let arr:any=document.getElementsByClassName('check2');
-    let a:any=window.document.getElementById('jiesuan');
-    if(item.getAttribute('checked')){
-      item.removeAttribute('checked');
-      a.style.backgroundColor = '#ccc'
-    }else{
-      item.setAttribute('checked',true);
-       a.style.backgroundColor = '#f90'
-    }
-    if(item.getAttribute('checked')){
       this.ipt=[];
       this.dataset.forEach((item) => {
         this.ipt.push(item.id);
       })
-    }else{
-      this.ipt=[];
     }
-    this.sea();
-    this.sel();
+    this.allp()
   }
-  sea(){
-    let arr:any=document.getElementsByClassName('check2');
-    let item:any=window.document.getElementById('check');
-    if(item.getAttribute('checked')){
-      for(let i=0;i<arr.length;i++){
-        arr[i].setAttribute('checked', true)
-      }
+  sincheck(event: any,id: any){
+    if(this.ipt.indexOf(id)> -1){
+      this.ipt.splice(this.ipt.indexOf(id),1);
     }else{
-       for(let i=0;i<arr.length;i++){
-        arr[i].removeAttribute('checked',false)
-      }
+      this.ipt.push(id);
     }
+    this.allp();
   }
-  sel(){
-    let pr:number=0;
-    if(this.ipt.length>0){
-        this.ipt.forEach((item) => {
-          this.dataset.forEach((item2) => {
-            if(item2.id==item){
-              pr+=item2.price*1;
-            }
-          })
+  allp(){
+    this.allprice=0
+    this.ipt.forEach((item) => {
+      this.dataset.forEach((res) => {
+        if(res.id==item){
+          this.allprice=this.allprice+(res.price*1);
+        }
+      })
+    })
+  }
+  jiesuan(event: any){
+    if($(event.target).hasClass('ac')){
+      let arr:any =[];
+      this.ipt.forEach((item) => {
+        this.dataset.forEach((res) => {
+          if(item==res.id){
+            arr.push(res);
+          }
         })
+      })
+      window.localStorage.setItem('carlist',JSON.stringify(arr));
+      this.router.navigate(['/confirm/']);
     }else{
-        this.allprice = 0;
-    }
-    this.allprice=pr;
-  }
-  jiesuan(){
-    let arr:any=document.getElementsByClassName('check2');
-    let item:any=window.document.getElementById('check');
-     for(let i = 0;i<arr.length;i++){
-     if(item.checked || arr[i].checked){
-         this.router.navigate(['confirm']);
-      }
     }
   }
+  bianji(event){
+    this.show=!this.show;
+  }
+  delcar(){
+    if(this.ipt.length>0){
+      let arr:Array<any>=[];
+      this.ipt.forEach((item) => {
+        this.dataset.forEach((res) => {
+          if(item==res.id){
+            arr.push(res.orderID);
+          }
+        })
+      })
+      this.http.get('delcar',{ipt:arr}).then((res) => {
+        if(res['status']){
+          arr.forEach((item) => {
+            this.dataset.forEach((res,idx) => {
+              if(item==res.orderID){
+                this.dataset.splice(idx,1);
+              }
+            })
+          })
 
+          this.taslkshow=true;
+          this.taslk="删除成功！"
+          setTimeout(() => {
+            this.taslkshow=false;
+          },2000)
+        }
+      })
+    }
+  }
 }

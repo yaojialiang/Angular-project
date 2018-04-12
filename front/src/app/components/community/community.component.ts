@@ -62,12 +62,21 @@ export class CommunityComponent implements OnInit {
 	}
 	constructor(private http:HttpclientService,private route: ActivatedRoute, private router: Router) { }
 	ngOnInit() {
-		this.http.get('sgoods').then((res) => {
-			this.dataset=res['data'];
-		})
-		while($('.setimg')[0]){
-			console.log(666);
+		let str:any;
+		this.route.params.subscribe((params) => {
+            str=params.tag;
+        });
+		if(str==0){
+			this.http.get('sgoods').then((res) => {
+				this.dataset=res['data'];
+			})
+		}else{
+			this.http.get('sgoods',{label:str}).then((res) => {
+				this.dataset=res['data'];
+				this.gametag=str;
+			})
 		}
+		
 	}
 
 }

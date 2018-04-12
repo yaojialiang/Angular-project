@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RootRouter } from './router/router';
 import {HttpModule} from '@angular/http';
-import {HttpclientService} from './services/httpclient.service'
-import {SpringService} from './services/spring.service'
+import {HttpclientService} from './services/httpclient.service';
+import {SpringService} from './services/spring.service';
 
 // import {AppModule} from '@angular/core';
 
@@ -31,8 +31,14 @@ import { SearchComponent } from './components/details/search/search.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SpinnerCarComponent } from './components/spinner-car/spinner-car.component';
 import { ZuixinComponent } from './components/zuixin/zuixin.component';
+
 import { PersonalComponent } from './components/mine/personal/personal.component';
 
+
+
+import { CuxiaoComponent } from './components/cuxiao/cuxiao.component';
+import { AllclassComponent } from './components/allclass/allclass.component';
+import { ManuComponent } from './components/manu/manu.component';
 
 
 
@@ -56,14 +62,20 @@ import { PersonalComponent } from './components/mine/personal/personal.component
     ConfirmComponent,
     PaymentComponent,
     ZuixinComponent,
+
     PersonalComponent,
 
 
 
+
+    CuxiaoComponent,
+    AllclassComponent,
+
     SearchComponent,
     SpinnerComponent,
     SpinnerCarComponent,
-    ZuixinComponent
+    ZuixinComponent,
+    ManuComponent
   ],
   imports: [
     BrowserModule,

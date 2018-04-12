@@ -1,15 +1,15 @@
 <div id="home">
     <div class='header'>
-        <i class="icon iconfont icon-lingdang"></i>
+        <i class="icon iconfont icon-BAI-lingdang"></i>
         <div>
             <span class="youxi">游戏</span>
             <span>周边</span>
         </div>
-        <i class="icon iconfont icon-search"></i>
+        <i class="icon iconfont icon-sousuo1"></i>
     </div>
     <div class='main'>
         <!-- 轮播图 -->
-        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
             <!-- 轮播（Carousel）指标 -->
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -56,14 +56,14 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a routerLink="/allclass">
                         <div class="imgs3">
                         </div>
-                        <p>周边</p>
+                        <p>全部分类</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a routerLink="/manu">
                         <div class="imgs4">
                         </div>
                         <p>厂商目录</p>
@@ -77,9 +77,12 @@
                 
             </div>
             <div class="neirong">
-                
-                《最终幻想15》宣布三波更新内容，无愧单机服务型游戏
-            
+                <ul class="lunbo"> 
+                     <li>一家游戏店的结业，为何会惊动大半个日本游戏圈？</li>
+                     <li>重温自己在TGA上大骂奥斯卡的抽风表现，他露出了这样的表情</li>
+                     <li>王牌特工登场！ 《幽灵行动：荒野》联动《细胞分裂》开启特殊活动</li>
+                     <li>人生在世须尽欢 莫使金樽空对月</li>
+                </ul>
             </div>
         </div>
         <!-- 畅销 -->
@@ -282,16 +285,35 @@
             </div>
             <div class='jump'>
                 <ul>
-                    <li routerLink="/home/zuixin/">最新</li>
-                    <li routerLink="/home/zuixin">促销</li>
-                    <li routerLink="/home/zuixin">预售</li>
-                    <li routerLink="/home/zuixin">周排行</li>
-                    <li routerLink="/home/zuixin">排行</li>
+                    <li>
+                        <a routerLink="/home/zuixin" [class.active]="types == 'zuixin'" (click)="this.types='zuixin'">
+                            最新
+                        </a>
+                    </li>
+                    <li >
+                        <a routerLink="/home/cuxiao" [class.active]="types == 'cuxiao'" (click)="this.types='cuxiao'">
+                            促销
+                        </a>
+                    </li>
+                    <li>
+                       <a routerLink="/home/zuixin" [class.active]="types == 'yushou'" (click)="this.types='yushou'">
+                            预售
+                        </a>
+                    </li>
+                    <li>
+                        <a  routerLink="/home/cuxiao" [class.active]="types == 'zhoupaihang'" (click)="this.types='zhoupaihang'">
+                            周排行
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/home/zuixin" [class.active]="types == 'yuepaihang'" (click)="this.types='yuepaihang'">
+                            周排行
+                        </a>
+                    </li>
                 </ul>
                 <router-outlet></router-outlet>
             </div>
         </div>
-
     </div>
     <app-footer [curr]="home"></app-footer>
 </div>

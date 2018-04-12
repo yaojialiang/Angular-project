@@ -2,7 +2,7 @@
     <ul class='header'>
         <li><i class="icon iconfont icon-xiangzuo"></i></li>
         <li>购物车</li>
-        <li><span (click)="bianji($event)">编辑</span><span style="display:none;" (click)="wancheng($event)">完成</span></li>
+        <li><span (click)="bianji($event)" *ngIf="show">编辑</span><span *ngIf="!show" (click)="bianji($event)">完成</span></li>
     </ul>
     <div class="headed-tabs">
         <div>游戏</div>
@@ -10,35 +10,42 @@
     </div>
     <div class='main'>
         <ul class="carslist" >
-            <li *ngFor="let item of dataset">
-                <input type="checkbox" (click)="select(item.id,$event)" class="check2"/>
-                <img src="{{item.imgs}}"/>
+            <li *ngFor="let item of dataset" >
+                <input type="checkbox"  class="check2" (click)="sincheck($event,item.id)" [id]="item.id" [checked]="ipt.indexOf(item.id) > -1">
+                <img src="{{item.cover}}"/>
                 <div class="carslist-tittle">
                     <p class="tittle">{{item.name}}</p>
                     <p class="price">￥{{item.price}}</p>
                 </div>
             </li>
         </ul>
+        <div class="look" *ngIf="dataset.length <1">
+            <div class="look_con">
+                <p>购物车空空如也</p>
+                <h4><a routerLink="/community/0">看看游戏</a><a routerLink="/community/0">看看周边</a></h4>
+            </div>
+        </div>
     </div>
     <div class="carsFoot" *ngIf=show>
-        <input type="checkbox"  (click)="selectAll($event)" id="check" />
+        <input type="checkbox" id="check" (click)="checkall($event)" [checked]="dataset.length==ipt.length">
         <div>
             <span>全选</span>
             <span>总计:<span class="price">￥{{allprice}}.00</span><span class=" freight">(不含运费)</span></span>
         </div>
-        <!-- <a routerLink="/confirm"> -->
-            <div class="goConfirm" id="jiesuan" (click)="jiesuan($event)">
+        <div>
+            <div  [ngClass]="{'goConfirm':true,'ac':ipt.length>0}" id="jiesuan" (click)="jiesuan($event)">
                 去结算
             </div>
-        <!-- </a> -->
+        </div>
     </div>
- 
-    <div class="carsFoot1" *ngIf=show1>
+    <div class="carsFoot1" *ngIf="!show">
         <div>
-            <input type="checkbox" />
+            <input type="checkbox" (click)="checkall($event)" [checked]="dataset.length==ipt.length"/>
             <span>全选</span>
         </div>
-        <div class="cars-del">删除</div>
+        <div class="cars-del" (click)="delcar()">删除</div>
     </div>
+
     <app-footer [curr]="car"></app-footer>
+    <app-spinner-car [taslk]="taslk" *ngIf="taslkshow"></app-spinner-car>
 </div>
