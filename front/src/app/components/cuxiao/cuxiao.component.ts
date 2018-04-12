@@ -1,34 +1,22 @@
-import { Component, OnInit ,Input} from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { Http } from '@angular/http';
 import { Router,ActivatedRoute,} from '@angular/router';
 @Component({
-  selector: 'app-zuixin',
-  templateUrl: './zuixin.component.html',
-  styleUrls: ['./zuixin.component.css']
+  selector: 'app-cuxiao',
+  templateUrl: './cuxiao.component.html',
+  styleUrls: ['./cuxiao.component.css']
 })
-export class ZuixinComponent implements OnInit {
-<<<<<<< HEAD
-    @Input() aa:string
-    data:Array<any>
-  constructor(private http: Http) { }
-=======
+export class CuxiaoComponent implements OnInit {
     data:Array
-    id:number
   constructor(private http: Http, private router: Router,private route: ActivatedRoute) { }
->>>>>>> f81391fce79a7d7402cbbab37b303bb5035d2c13
 
   ngOnInit() {
-     this.http.get('http://10.3.136.33:8080/sgoods?hot=true').subscribe((res) => {
+         this.http.get('http://10.3.136.33:8080/sgoods?new=true').subscribe((res) => {
             res=res.json()
-<<<<<<< HEAD
-            this.data = res['data'];
+            this.data = res.data;
             console.log(this.data)
 
-=======
-            this.data = res.data;
->>>>>>> f81391fce79a7d7402cbbab37b303bb5035d2c13
         });
-      
   }
   chuanid($event){
     if($event.target.id){
@@ -40,6 +28,5 @@ export class ZuixinComponent implements OnInit {
     }
     this.router.navigate(['shoppingcar',this.id]));
   }
-
 
 }

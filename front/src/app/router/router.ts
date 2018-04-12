@@ -10,11 +10,16 @@ import {ConfirmComponent} from '../components/confirm/confirm.component'
 import {PaymentComponent} from '../components/payment/payment.component'
 import {SearchComponent} from '../components/details/search/search.component'
 import {ZuixinComponent} from '../components/zuixin/zuixin.component'
+import {CuxiaoComponent} from '../components/cuxiao/cuxiao.component'
+import {AllclassComponent} from '../components/allclass/allclass.component'
 const routes: Routes = [
+    {path: '', redirectTo: '/home/zuixin', pathMatch: 'full'},
+    {path: 'home',component: HomeComponent
     {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: 'home',component: HomeComponent,
         children:[
-            {path:'zuixin',component:ZuixinComponent}
+            {path:'zuixin',component:ZuixinComponent},
+            {path:'cuxiao',component:CuxiaoComponent}
         ]
     },
     {path: 'community',component: CommunityComponent},
@@ -26,6 +31,7 @@ const routes: Routes = [
     {path: 'details/:id',component: DetailsComponent},
     {path: 'confirm',component: ConfirmComponent},
     {path: 'payment',component: PaymentComponent},
+    {path: 'allclass',component:AllclassComponent}
     {path: 'gamesearch',component: SearchComponent}
 ]
 

@@ -23,6 +23,8 @@ import { SearchComponent } from './components/details/search/search.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SpinnerCarComponent } from './components/spinner-car/spinner-car.component';
 import { ZuixinComponent } from './components/zuixin/zuixin.component';
+import { CuxiaoComponent } from './components/cuxiao/cuxiao.component';
+import { AllclassComponent } from './components/allclass/allclass.component';
 
 
 @NgModule({
@@ -40,6 +42,9 @@ import { ZuixinComponent } from './components/zuixin/zuixin.component';
     RimComponent,
     ConfirmComponent,
     PaymentComponent,
+    ZuixinComponent,
+    CuxiaoComponent,
+    AllclassComponent
 
     SearchComponent,
     SpinnerComponent,
