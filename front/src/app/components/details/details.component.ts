@@ -20,6 +20,7 @@ export class DetailsComponent implements OnInit {
 	arr:Array<any>=[];
 	taslk:string;
 	taslkshow:Boolean=false;
+	selitem:boolean=false;
 	constructor(private route: ActivatedRoute, private router: Router,private http:HttpclientService,private backurl:SpringService ) { }
 	dow(event: any){
 		if(event.type=='touchstart'){
@@ -140,5 +141,8 @@ export class DetailsComponent implements OnInit {
 		window.localStorage.setItem('carlist',JSON.stringify(this.dataset));
 		this.backurl.backhis='details';
 		this.router.navigate(['/payment/']);
+	}
+	sellist(){
+		this.selitem=!this.selitem;
 	}
 }

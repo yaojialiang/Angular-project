@@ -30,7 +30,9 @@ export class SearchComponent implements OnInit {
   		}
   	}else if(item.value!=''){
   		this.arr.push(item.value)
-  	}
+  	}else if(item.value==''){
+      return
+    }
   	window.localStorage.setItem('search',JSON.stringify(this.arr))
   	this.http.get('fuzzygoods',{data:item.value}).then((res) => {
   		this.dataset=res['data'];

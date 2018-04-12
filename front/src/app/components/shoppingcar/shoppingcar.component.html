@@ -19,6 +19,12 @@
                 </div>
             </li>
         </ul>
+        <div class="look" *ngIf="dataset.length <1">
+            <div class="look_con">
+                <p>购物车空空如也</p>
+                <h4><a routerLink="/community">看看游戏</a><a routerLink="/community">看看周边</a></h4>
+            </div>
+        </div>
     </div>
     <div class="carsFoot" *ngIf=show>
         <input type="checkbox" id="check" (click)="checkall($event)" [checked]="dataset.length==ipt.length">
@@ -32,7 +38,6 @@
             </div>
         </div>
     </div>
- 
     <div class="carsFoot1" *ngIf="!show">
         <div>
             <input type="checkbox" (click)="checkall($event)" [checked]="dataset.length==ipt.length"/>
@@ -40,6 +45,7 @@
         </div>
         <div class="cars-del" (click)="delcar()">删除</div>
     </div>
+
     <app-footer [curr]="car"></app-footer>
     <app-spinner-car [taslk]="taslk" *ngIf="taslkshow"></app-spinner-car>
 </div>

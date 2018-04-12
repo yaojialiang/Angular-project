@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import * as $ from 'jquery';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
     home:string='home'
-    types:sting = 'zuixin'
+    types:string = 'zuixin'
     cc
     constructor(){}
     aa(){
@@ -18,3 +18,4 @@ export class HomeComponent implements OnInit {
     ngOnInit() {
         setInterval(this.aa,3000)
     }
+}

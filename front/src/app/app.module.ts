@@ -2,8 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RootRouter } from './router/router';
 import {HttpModule} from '@angular/http';
-import {HttpclientService} from './services/httpclient.service'
-import {SpringService} from './services/spring.service'
+import {HttpclientService} from './services/httpclient.service';
+import {SpringService} from './services/spring.service';
 
 import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -44,8 +44,7 @@ import { AllclassComponent } from './components/allclass/allclass.component';
     PaymentComponent,
     ZuixinComponent,
     CuxiaoComponent,
-    AllclassComponent
-
+    AllclassComponent,
     SearchComponent,
     SpinnerComponent,
     SpinnerCarComponent,

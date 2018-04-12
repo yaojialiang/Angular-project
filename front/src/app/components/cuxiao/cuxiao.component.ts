@@ -7,13 +7,14 @@ import { Router,ActivatedRoute,} from '@angular/router';
   styleUrls: ['./cuxiao.component.css']
 })
 export class CuxiaoComponent implements OnInit {
-    data:Array
+    data:Array<any>;
+    id:any;
   constructor(private http: Http, private router: Router,private route: ActivatedRoute) { }
 
   ngOnInit() {
          this.http.get('http://10.3.136.33:8080/sgoods?new=true').subscribe((res) => {
             res=res.json()
-            this.data = res.data;
+            this.data = res['data'];
             console.log(this.data)
 
         });
@@ -26,7 +27,7 @@ export class CuxiaoComponent implements OnInit {
     }else if($event.target.parentNode.parentNode.id){
       this.id=$event.target.parentNode.parentNode.id
     }
-    this.router.navigate(['shoppingcar',this.id]));
+    this.router.navigate(['shoppingcar',this.id]);
   }
 
 }
