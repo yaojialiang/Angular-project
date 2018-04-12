@@ -69,7 +69,7 @@
 			<p>收藏</p>
 		</div>
 		<div style="flex: 2;background: #FF9700;color:#fff" (click)="addcar()">加入购物车</div>
-		<div style="flex: 2;background: #FE5722;color:#fff">立即购买</div>
+		<div style="flex: 2;background: #FE5722;color:#fff" (click)="nowbuy()">立即购买</div>
 	</div>
 	<app-spinner-car [taslk]="taslk" *ngIf="taslkshow"></app-spinner-car>
 </div>

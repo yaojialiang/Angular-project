@@ -8,13 +8,13 @@ import { Http } from '@angular/http';
 })
 export class ZuixinComponent implements OnInit {
     @Input() aa:string
-    data:Array
+    data:Array<any>
   constructor(private http: Http) { }
 
   ngOnInit() {
      this.http.get('http://10.3.136.33:8080/sgoods?new=true').subscribe((res) => {
             res=res.json()
-            this.data = res.data;
+            this.data = res['data'];
             console.log(this.data)
 
         });
