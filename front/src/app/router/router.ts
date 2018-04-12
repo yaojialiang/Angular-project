@@ -12,6 +12,7 @@ import {SearchComponent} from '../components/details/search/search.component'
 import {ZuixinComponent} from '../components/zuixin/zuixin.component'
 import {CuxiaoComponent} from '../components/cuxiao/cuxiao.component'
 import {AllclassComponent} from '../components/allclass/allclass.component'
+import {ManuComponent} from '../components/manu/manu.component'
 const routes: Routes = [
     {path: '', redirectTo: '/home/zuixin', pathMatch: 'full'},
     {path: 'home',component: HomeComponent},
@@ -32,7 +33,8 @@ const routes: Routes = [
     {path: 'confirm',component: ConfirmComponent},
     {path: 'payment',component: PaymentComponent},
     {path: 'allclass',component:AllclassComponent},
-    {path: 'gamesearch',component: SearchComponent}
+    {path: 'gamesearch',component: SearchComponent},
+    {path: 'manu',component:ManuComponent}
 ]
 
 export const RootRouter = RouterModule.forRoot(

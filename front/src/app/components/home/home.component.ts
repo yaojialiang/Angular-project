@@ -9,7 +9,7 @@ export class HomeComponent implements OnInit {
     home:string='home'
     types:string = 'zuixin'
     constructor(){
-
+        let timer = setInterval(this.aa,2000);
     }
     aa(){
         $('.lunbo').animate({top:'-0.84rem'}).animate({top:0},0,function(){
@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
         })
     }
     ngOnInit() {
-        let timer = setInterval(this.aa,2000);
+        
     }
 
 }

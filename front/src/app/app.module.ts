@@ -25,6 +25,7 @@ import { SpinnerCarComponent } from './components/spinner-car/spinner-car.compon
 import { ZuixinComponent } from './components/zuixin/zuixin.component';
 import { CuxiaoComponent } from './components/cuxiao/cuxiao.component';
 import { AllclassComponent } from './components/allclass/allclass.component';
+import { ManuComponent } from './components/manu/manu.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { AllclassComponent } from './components/allclass/allclass.component';
     SearchComponent,
     SpinnerComponent,
     SpinnerCarComponent,
-    ZuixinComponent
+    ZuixinComponent,
+    ManuComponent
   ],
   imports: [
     BrowserModule,
