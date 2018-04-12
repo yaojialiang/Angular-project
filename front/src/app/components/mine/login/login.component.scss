@@ -22,6 +22,7 @@
             .icon-yanjing{
                 display:block;position:absolute;width: 0.666667rem;font-size:0.503333rem;top:0.78rem;right:0.1rem;font-size:0.503333rem;color:#C5C5C5;
             }
+            .active{color:orange;}
         }
         >div:nth-child(4){
             height:1.506667rem;line-height:1.50rem;color:#B5B5B5;font-size:0.33rem;margin-left: 0.896667rem;
@@ -29,4 +30,6 @@
         button{width: 80%;height:1.153333rem;background-color:#FF5722;text-align:center;color:#FFFFFF;font-size:0.413333rem;margin-left:0.89rem;margin-right: 0.9rem;}
         p{font-size:0.4105rem;color:#FF5722;text-align:center;margin-top: 0.493333rem;}
     }
+
+    .pop{position:absolute;left: 48%;top:45%;transform:translate(-50%,0);padding-left: 0.3rem;padding-right: 0.3rem;height: 0.9067rem;line-height: 0.907rem;background-color:#000;opacity:0.6;color:#fff;text-align:center;font-size:0.45rem;border-radius:0.2rem;}
 }

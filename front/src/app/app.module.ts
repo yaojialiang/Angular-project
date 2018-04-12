@@ -1,11 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RootRouter } from './router/router';
+import {HttpModule} from '@angular/http';
+import {HttpclientService} from './services/httpclient.service'
+import {SpringService} from './services/spring.service'
+
+// import {AppModule} from '@angular/core';
+
+
 import {FormsModule} from '@angular/forms';
-
-import { HttpModule } from '@angular/http';
-
-
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -24,6 +27,9 @@ import { DetailsComponent } from './components/details/details.component';
 import { RimComponent } from './src/app/component/rim/rim.component';
 import { ConfirmComponent } from './components/confirm/confirm.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { SearchComponent } from './components/details/search/search.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { SpinnerCarComponent } from './components/spinner-car/spinner-car.component';
 import { ZuixinComponent } from './components/zuixin/zuixin.component';
 import { PersonalComponent } from './components/mine/personal/personal.component';
 
@@ -43,7 +49,7 @@ import { PersonalComponent } from './components/mine/personal/personal.component
     MineComponent,
 
     LoginComponent,
-    RegComponent
+    RegComponent,
 
     DetailsComponent,
     RimComponent,
@@ -53,14 +59,22 @@ import { PersonalComponent } from './components/mine/personal/personal.component
     PersonalComponent,
 
 
+
+    SearchComponent,
+    SpinnerComponent,
+    SpinnerCarComponent,
+    ZuixinComponent
   ],
   imports: [
     BrowserModule,
     RootRouter,
-    FormsModule, 
+    FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [HttpclientService,SpringService, 
+    HttpModule,
+    AppModule,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

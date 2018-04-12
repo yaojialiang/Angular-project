@@ -11,8 +11,8 @@
     <div class='main'>
         <ul class="carslist" >
             <li *ngFor="let item of dataset">
-                <input type="checkbox"/>
-                <img src="https://s1.sonkwo.com/FhzTWiBW-opJtYSQrWk8CH1Vmg9Z?imageMogr2/thumbnail/256" />
+                <input type="checkbox" (click)="select(item.id,$event)" class="check2"/>
+                <img src="{{item.imgs}}"/>
                 <div class="carslist-tittle">
                     <p class="tittle">{{item.name}}</p>
                     <p class="price">￥{{item.price}}</p>
@@ -21,16 +21,16 @@
         </ul>
     </div>
     <div class="carsFoot" *ngIf=show>
-        <input type="checkbox" />
+        <input type="checkbox"  (click)="selectAll($event)" id="check" />
         <div>
             <span>全选</span>
-            <span>总计:<span class="price">￥800.00</span><span class=" freight">(不含运费)</span></span>
+            <span>总计:<span class="price">￥{{allprice}}.00</span><span class=" freight">(不含运费)</span></span>
         </div>
-        <a routerLink="/confirm">
-            <div class="goConfirm">
+        <!-- <a routerLink="/confirm"> -->
+            <div class="goConfirm" id="jiesuan" (click)="jiesuan($event)">
                 去结算
             </div>
-        </a>
+        <!-- </a> -->
     </div>
  
     <div class="carsFoot1" *ngIf=show1>
@@ -40,5 +40,5 @@
         </div>
         <div class="cars-del">删除</div>
     </div>
-       <app-footer [curr]="car"></app-footer>
+    <app-footer [curr]="car"></app-footer>
 </div>
