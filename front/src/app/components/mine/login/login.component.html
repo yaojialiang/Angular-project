@@ -1,0 +1,23 @@
+<div id="login">
+    <div class="header">
+        <div class="close">关闭</div>
+        <div>登录</div>
+        <a routerLink="/reg"><div>注册</div></a>
+    </div>
+    <div class="main">
+        <h1></h1>
+        <div>
+            <i class="iconfont icon-shouji"></i>
+            <input type="text" placeholder="请输入手机号/邮箱" #user />
+        </div>
+        <div>
+            <i class="iconfont icon-jiesuo"></i>
+            <input type="password" placeholder="请输入密码" #psw id="psw"/>
+            <i class="iconfont icon-yanjing" (click)="showPwd()"></i>
+        </div>
+        <div>登陆遇到问题？</div>
+        <button id="btn" (click)="login(user,psw,panduan)">登录</button>
+        <p>手机号快捷登录</p>
+    </div>
+    <div class="pop" *ngIf="showPop">{{remind}}</div>
+</div>

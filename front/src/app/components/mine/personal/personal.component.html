@@ -1,0 +1,37 @@
+<div id="personal">
+    <div class="header">
+        <a routerLink="/mine"><div class="iconfont icon-iconfontjiantou1"></div></a>
+        <div>基本信息</div>
+        <div class="keep">保存</div>
+    </div>
+    <div class="main">
+        <div class="mt" (click)="photo()"></div>
+        <div class="mb">
+            <div class="nick">
+                <span>昵称</span>
+                <input type="text" name="" />
+            </div>
+            <!-- <p *ngIf="remind">长度不能超过10个汉字或20字符</p> -->
+            <p>长度不能超过10个汉字或20字符</p>
+            <div class="sex">
+                <span>性别</span>
+                <ul>
+                    <li><div (click)="nan()" [ngClass]="{'iconfont':true,'icon-nan':true,'active1':sex=='nan'}"></div></li>
+                    <li><div [ngClass]="{'iconfont':true,'icon-nan':true,'active1':sex=='nv'}" (click)="nv()"></div></li>
+                    <li><div [ngClass]="{'iconfont':true,'icon-nan':true,'active1':sex=='zhong'}" (click)="zhong()"></div></li>
+                </ul>
+            </div>
+            <button>退出登录</button>
+        </div>
+    </div>
+    <div class="mask" (click)="closshow($event)">
+        <div class="pop">
+            <div class="head">
+                <p>更改头像</p>
+                <p>拍照</p>
+                <p>本地图片</p>
+            </div>
+            <div class="cancel">取消</div>
+        </div>
+    </div>
+</div>
