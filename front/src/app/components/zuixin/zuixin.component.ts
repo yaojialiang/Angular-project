@@ -7,14 +7,13 @@ import { Router,ActivatedRoute,} from '@angular/router';
   styleUrls: ['./zuixin.component.css']
 })
 export class ZuixinComponent implements OnInit {
-    data:Array
-    id:number
+    data:Array<any>;
+    id:number;
   constructor(private http: Http, private router: Router,private route: ActivatedRoute) { }
 
   ngOnInit() {
      this.http.get('http://10.3.136.33:8080/sgoods?hot=true').subscribe((res) => {
-            res=res.json()
-            this.data = res.data;
+            this.data = res.json().data;
         });
       
   }
@@ -26,7 +25,7 @@ export class ZuixinComponent implements OnInit {
     }else if($event.target.parentNode.parentNode.id){
       this.id=$event.target.parentNode.parentNode.id
     }
-    this.router.navigate(['shoppingcar',this.id]));
+    this.router.navigate(['details',this.id]);
   }
 
 

@@ -44,8 +44,7 @@ import { AllclassComponent } from './components/allclass/allclass.component';
     PaymentComponent,
     ZuixinComponent,
     CuxiaoComponent,
-    AllclassComponent
-
+    AllclassComponent,
     SearchComponent,
     SpinnerComponent,
     SpinnerCarComponent,
