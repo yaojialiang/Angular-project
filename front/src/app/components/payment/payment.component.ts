@@ -34,10 +34,13 @@ export class PaymentComponent implements OnInit {
   		this.http.get('delcar',{ipt:arr}).then((res) => {
   			if(res['status']){
   				alert('支付成功！')
+          this.router.navigate(['/home/zuixin']);
   			}
   		})
   	}else{
-  		window.localStorage.setItem('carlist','')
+  		window.localStorage.setItem('carlist','');
+      alert('支付成功！');
+      this.router.navigate(['/home/zuixin']);
   	}
   }
   back(){

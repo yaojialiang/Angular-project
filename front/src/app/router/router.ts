@@ -22,7 +22,7 @@ const routes: Routes = [
             {path:'cuxiao',component:CuxiaoComponent}
         ]
     },
-    {path: 'community',component: CommunityComponent},
+    {path: 'community/:tag',component: CommunityComponent},
     {path: 'headlines',component: HeadlinesComponent},
     {path: 'shoppingcar',component: ShoppingcarComponent},
     {path: 'mine',component: MineComponent},

@@ -14,5 +14,10 @@ export class AllclassComponent implements OnInit {
   back(){
     this.router.navigate(['/home/zuixin'])
   }
-
+  tagclick(event: any){
+  	if(event.target.tagName.toLowerCase()=='button'){
+  		// console.log(event.target.innerText)
+      this.router.navigate(['/community/'+event.target.innerText]);
+  	}
+  }
 }
