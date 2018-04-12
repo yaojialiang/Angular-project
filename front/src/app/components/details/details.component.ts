@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import * as $ from 'jquery';
 import {HttpclientService} from '../../services/httpclient.service';
+import {SpringService} from '../../services/spring.service'
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
@@ -19,7 +20,8 @@ export class DetailsComponent implements OnInit {
 	arr:Array<any>=[];
 	taslk:string;
 	taslkshow:Boolean=false;
-	constructor(private route: ActivatedRoute, private router: Router,private http:HttpclientService ) { }
+	selitem:boolean=false;
+	constructor(private route: ActivatedRoute, private router: Router,private http:HttpclientService,private backurl:SpringService ) { }
 	dow(event: any){
 		if(event.type=='touchstart'){
 			this.start=event.targetTouches[0].clientX;
@@ -103,7 +105,6 @@ export class DetailsComponent implements OnInit {
         this.http.get('sgoods',{id}).then((res) => {
         	this.dataset=res['data'];
         	this.arr=res['data'][0].imgs.split(',')
-        	console.log(this.dataset);
         })
 	}
 	addcar(){
@@ -124,9 +125,7 @@ export class DetailsComponent implements OnInit {
 				}else if(res['status']=='yfk'){
 					this.tal('买过不能再买哦!')
 				}
-				console.log(res)
 			})
-			console.log(username,goodsID);
 		}else{
 			this.router.navigate(['/login/']);
 		}
@@ -137,5 +136,13 @@ export class DetailsComponent implements OnInit {
 		setTimeout(() => {
 			this.taslkshow=false;
 		},2000)
+	}
+	nowbuy(){
+		window.localStorage.setItem('carlist',JSON.stringify(this.dataset));
+		this.backurl.backhis='details';
+		this.router.navigate(['/payment/']);
+	}
+	sellist(){
+		this.selitem=!this.selitem;
 	}
 }

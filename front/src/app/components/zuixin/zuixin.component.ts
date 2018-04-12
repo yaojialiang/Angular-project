@@ -26,6 +26,9 @@ export class ZuixinComponent implements OnInit {
       this.id=$event.target.parentNode.parentNode.id
     }
     this.router.navigate(['details',this.id]);
+
+
+
   }
 
 

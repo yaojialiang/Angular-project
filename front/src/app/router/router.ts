@@ -14,6 +14,8 @@ import {CuxiaoComponent} from '../components/cuxiao/cuxiao.component'
 import {AllclassComponent} from '../components/allclass/allclass.component'
 const routes: Routes = [
     {path: '', redirectTo: '/home/zuixin', pathMatch: 'full'},
+    {path: 'home',component: HomeComponent},
+    {path: '', redirectTo: '/home', pathMatch: 'full'},
     {path: 'home',component: HomeComponent,
         children:[
             {path:'zuixin',component:ZuixinComponent},

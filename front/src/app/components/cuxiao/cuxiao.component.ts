@@ -12,7 +12,6 @@ export class CuxiaoComponent implements OnInit {
   constructor(private http: Http, private router: Router,private route: ActivatedRoute) { }
   ngOnInit() {
          this.http.get('http://10.3.136.33:8080/sgoods?new=true').subscribe((res) => {
-            
             this.data = res.json().data;
         })
   }

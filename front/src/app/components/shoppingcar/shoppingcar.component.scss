@@ -3,6 +3,7 @@
     display:flex;
     background-color:#F0F0F0;
     flex-direction:column;
+    
     .header{
        display:flex;
         width: 100%;
@@ -50,6 +51,32 @@
         flex:1;
         background:#F4F4F4;
         overflow-x:hidden;
+        position: relative;
+        .look{
+            position: absolute;
+            left: 0;top: 0;right:0;bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .look_con{
+                text-align: center;
+                p{
+                    font-size: 0.426667rem;
+                    color:#444;
+                    margin-bottom:0.533333rem;
+                }
+                h4{
+                    font-size: 0.373333rem;
+                    
+                    a{
+                        color:#009ACD;
+                        padding:0.266667rem;
+                    }
+                }
+                
+            }
+
+        }
         .carslist{
             li{
                 display:flex;
@@ -104,6 +131,11 @@
             }
             .freight{
                 color:#C1C1C1;
+            }
+        }
+        div{
+            .ac{
+                background: #f90;
             }
         }
        .goConfirm{
