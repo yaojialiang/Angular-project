@@ -23,6 +23,7 @@ export class DetailsComponent implements OnInit {
 	selitem:boolean=false;
 	constructor(private route: ActivatedRoute, private router: Router,private http:HttpclientService,private backurl:SpringService ) { }
 	dow(event: any){
+		event.preventDefault();
 		if(event.type=='touchstart'){
 			this.start=event.targetTouches[0].clientX;
 		}else if(event.type=='touchend'){

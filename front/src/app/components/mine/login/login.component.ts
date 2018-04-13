@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
                     window.localStorage.setItem('user',res['data'][0].username);
                     this.showPop = true;
                     this.remind = '恭喜你，可以愉快的玩游戏了';
-                    this.router.navigate(['/home/']);
+                    this.router.navigate(['/home/zuixin']);
                     window.localStorage.setItem('user',username);
 
                 }else{

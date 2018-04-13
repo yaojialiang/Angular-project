@@ -14,20 +14,22 @@
     }
 
     .main{
-
+        display: flex;
+        flex-direction: column;
+        height: 100%;
         h1{width: 100%;margin-top: 1.386667rem;height:2.413333rem;background:url('../../../../assets/img/logo.png') no-repeat;background-size:contain;margin-bottom: 0.226667rem;}
         >div:nth-child(2),>div:nth-child(3),>div:nth-child(5){
-            height:1.3rem;margin-left:1.906667rem;margin-right: 0.9rem;border-bottom:2px solid #DCDCDC;position:relative;padding-top:0.19rem;
+            height:1.3rem;margin-left:1.906667rem;margin-right: 0.9rem;border-bottom:2px solid #DCDCDC;position:relative;margin-bottom:0.266667rem;
             p{
                 position:absolute;border:1px solid red;left:-0.1rem;top: -0.29rem;height: 0.53333rem;font-size:0.306667rem;color:red;padding:0.1rem 0.19rem;
                 .arrow{position:absolute;left: 0.5rem;top: 0.53rem;display:block;width: 0;height: 0;border:0.166667rem solid transparent;border-top-color:red;}
             }
-            // .phone{display:block;}
+             .phone{display:block;}
             
             input{width: 100%;height:0.98667rem;color:#56524C;font-size:0.406667rem;border:none;}
             .icon-shouji,.icon-anquanweishi,.icon-xinfeng,.icon-jiesuo{display:block;position:absolute;left:-0.87rem;top:0.78rem;font-size:0.503333rem;color:#C5C5C5;}
             .icon-yanjing{
-                display:block;position:absolute;width: 0.666667rem;font-size:0.503333rem;top:0.78rem;right:0.1rem;font-size:0.503333rem;color:#C5C5C5;
+                display:block;position:absolute;width: 0.666667rem;font-size:0.503333rem;right:0;bottom:0;font-size:0.503333rem;color:#C5C5C5;
             }
             .active{color:orange;}
         }
@@ -43,11 +45,14 @@
         }
         .code{border:none;height:0.846667rem;line-height:0.846667rem;padding-top:0.03rem;border-bottom:none;margin-left:1.906667rem;margin-right: 0.9rem;font-size:0.48rem;color:red;display:none;}
 
-        ul{
-            display:flex;width: 4rem;
-            color:#fff;margin-top: 0.133333rem;margin-left:2rem;
+        .prefun{
+            display:flex;width: 100%;
+            color:#fff;
+            justify-content: center;
+            align-items: center;
+            margin-top:0.266667rem;
             li{
-                flex:1;text-align:center;font-size:0.366667rem;color:#fff;background-color:#CCC;
+               width: 15%; text-align:center;font-size:0.366667rem;color:#fff;background-color:#CCC;
             }
             .k{background-color:#C30;}
             .kiss{background-color:#CCC;}
