@@ -22,7 +22,7 @@ export class RegComponent implements OnInit {
 
     regstr: boolean = false
 
-    showPop； boolean = false
+    showPop:boolean = false
 
 
     //点击注册
@@ -93,7 +93,7 @@ export class RegComponent implements OnInit {
 
     // 获取随机验证码
     getCode(){
-        let arr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+        let arr:any = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
         let vCode = '';
         for(let i=0;i<4;i++){
             let num:any=Math.random()*arr.length
