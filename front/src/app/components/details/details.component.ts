@@ -150,4 +150,7 @@ export class DetailsComponent implements OnInit {
 	sellist(){
 		this.selitem=!this.selitem;
 	}
+	gocar(){
+		this.router.navigate(['/shoppingcar/']);
+	}
 }

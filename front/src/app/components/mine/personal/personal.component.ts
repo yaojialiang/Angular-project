@@ -12,7 +12,7 @@ export class PersonalComponent implements OnInit {
     active:boolean = false;
     sex:string='nan';
     nickname:string='';
-    imgs:string='http://img.duoziwang.com/uploads/c160224/145632J63430-36438.jpg';
+    imgs:string='http://10.3.136.33:8080/assets/head.jpg';
     constructor(private http:HttpclientService,private route: ActivatedRoute, private router: Router) { }
 
     ngOnInit() {
@@ -31,14 +31,14 @@ export class PersonalComponent implements OnInit {
     photo(){
         $('.mask').css('display','block');
         $('.pop').animate({
-            marginTop:'116%'
+            marginBottom:'0%'
         },500)
     }
     closshow(event: any){
         event.stopPropagation();
         if(event.target.className=='mask'){
             $('.pop').animate({
-                marginTop:'216%'
+                marginBottom:'-100%'
             },500,function(){
                 $('.mask').css('display','none');
             })

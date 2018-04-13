@@ -1,6 +1,6 @@
 <div id="shoppingcar">
     <ul class='header'>
-        <li><i class="icon iconfont icon-xiangzuo"></i></li>
+        <li><i class="icon iconfont icon-xiangzuo" (click)="goback()"></i></li>
         <li>购物车</li>
         <li><span (click)="bianji($event)" *ngIf="show">编辑</span><span *ngIf="!show" (click)="bianji($event)">完成</span></li>
     </ul>

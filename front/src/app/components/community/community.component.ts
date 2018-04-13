@@ -60,6 +60,9 @@ export class CommunityComponent implements OnInit {
 			})
 		}
 	}
+	goback(){
+		this.router.navigate(['//home/zuixin']);
+	}
 	constructor(private http:HttpclientService,private route: ActivatedRoute, private router: Router) { }
 	ngOnInit() {
 		let str:any;

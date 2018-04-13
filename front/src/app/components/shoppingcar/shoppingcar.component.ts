@@ -119,4 +119,7 @@ export class ShoppingcarComponent implements OnInit {
   godetails(event:any,id:any){
     this.router.navigate(['/details/'+id]);
   }
+  goback(){
+    this.router.navigate(['/community/0']);
+  }
 }

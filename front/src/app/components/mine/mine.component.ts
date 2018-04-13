@@ -14,7 +14,7 @@ export class MineComponent implements OnInit {
 	ngOnInit() {
 		this.http.get('suser',{username:window.localStorage.getItem('user')}).then((res) => {
 			console.log(res);
-			if(res['data'][0].nickname==null){
+			if(res['data'][0].nickname==null||res['data'][0].nickname==''){
 
 			}else{
 				this.nickname=res['data'][0].nickname;

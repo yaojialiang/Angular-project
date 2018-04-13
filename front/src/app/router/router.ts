@@ -45,7 +45,7 @@ const routes: Routes = [
     {path: 'details/:id',component: DetailsComponent},
     {path: 'confirm',component: ConfirmComponent},
 
-    {path: 'payment',component: PaymentComponent}
+    {path: 'payment',component: PaymentComponent},
 
 
     {path: 'payment',component: PaymentComponent},
