@@ -4,7 +4,18 @@
 * @Last Modified by:   Marte
 * @Last Modified time: 2018-04-08 21:05:54
 */
-
+.swiper-container {
+    height: 5.333333rem;
+    img{
+        width: 100%;height: 100%
+    }
+    .swiper-button-prev{
+        color:#ccc;
+    }
+    button{
+        background-color: #ccc;
+    }
+}  
 #home{
     height:100%;
     display:flex;

@@ -96,7 +96,8 @@ export class RegComponent implements OnInit {
         let arr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
         let vCode = '';
         for(let i=0;i<4;i++){
-            vCode += arr[parseInt(Math.random()*arr.length)];
+            let num:any=Math.random()*arr.length
+            vCode += arr[parseInt(num)];
         }
         $('.code').show().text(vCode);
     }
