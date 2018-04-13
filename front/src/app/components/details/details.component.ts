@@ -138,9 +138,14 @@ export class DetailsComponent implements OnInit {
 		},2000)
 	}
 	nowbuy(){
-		window.localStorage.setItem('carlist',JSON.stringify(this.dataset));
-		this.backurl.backhis='details';
-		this.router.navigate(['/confirm/']);
+		if(window.localStorage.getItem('user')){
+			window.localStorage.setItem('carlist',JSON.stringify(this.dataset));
+			this.backurl.backhis='details';
+			this.router.navigate(['/confirm/']);
+		}else{
+			this.router.navigate(['/login/']);
+		}
+		
 	}
 	sellist(){
 		this.selitem=!this.selitem;

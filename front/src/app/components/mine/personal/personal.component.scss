@@ -12,14 +12,40 @@
     }
     .main{
         flex:1;background-color:#FFFFFF;
-        .mt{width: 100%;height:6rem;background:url('../../../../assets/img/personal.jpg') no-repeat;background-size:contain;}
+        .mt{
+            width: 100%;height:6rem;background:url('../../../../assets/img/personal.jpg') no-repeat;background-size:contain;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .tou{
+                width: 2.666667rem;
+                height: 2.666667rem;
+                border-radius: 1.333333rem;
+                border:1px solid #fff;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 1.333333rem;
+                }
+            }
+        }
         .mb{
             padding-top:2.8rem;
             .nick{
+                display: flex;
                 padding-left: 0.72rem;padding-right: 0.5rem;display:flex;align-items:center;
-                span{}
+                height: 1.033333rem;
+                span{
+                    display: flex;
+                    align-items: center;
+                }
                 input{
-                    height: 1.033333rem;width: 7.2rem;margin-left: 0.266667rem;
+                    border:2px solid #ccc;
+                    padding: 0.266667rem;
+                    height: 100%;width: 80%;margin:0 0.266667rem;
+                    &:focus{
+                        border:2px solid #FFC125;
+                    }
                 }
                 .nickName{border:1px solid #DB6027;}
             }
@@ -64,6 +90,20 @@
                 p:nth-child(3){
                     height:37%;color:#1C74BC;display:flex;justify-content:center;align-items:center;font-size:0.433333rem;border-top:1px solid #DFDFDF;
                 }
+                .getpic{
+                    position: relative;
+                    .pic{
+                        opacity: 0;
+                        position: absolute;
+                        top: 0;right: 0;bottom: 0;left: 0;
+                        z-index: 666;
+                    }
+                    .span{
+                        position: absolute;
+                        z-index: 555;
+                    }
+                }
+                
             }
             .cancel{
                 width: 100%;height: 25%;background-color:#fff;border-radius:0.28rem;color:#0584FF;font-weight:bold;display:flex;justify-content:center;align-items:center;font-size:0.433333rem;

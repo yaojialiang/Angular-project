@@ -1,6 +1,6 @@
 <div id="login">
     <div class="header">
-        <div class="close">关闭</div>
+        <div class="close" (click)="close()">关闭</div>
         <div>登录</div>
         <a routerLink="/reg"><div>注册</div></a>
     </div>
@@ -16,7 +16,7 @@
             <i class="iconfont icon-yanjing" (click)="showPwd()"></i>
         </div>
         <div>登陆遇到问题？</div>
-        <button id="btn" (click)="login(user,psw,panduan)">登录</button>
+        <button id="btn" (click)="login(user,psw)">登录</button>
         <p>手机号快捷登录</p>
     </div>
     <div class="pop" *ngIf="showPop">{{remind}}</div>

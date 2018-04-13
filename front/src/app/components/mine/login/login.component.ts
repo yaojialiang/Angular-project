@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpclientService } from '../../../services/httpclient.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import * as $ from 'jquery';
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',
@@ -20,9 +21,9 @@ export class LoginComponent implements OnInit {
 
 
     //点击验证登陆
-    login(username,password){
-        let username:string=username.value;
-        let password:string=password.value;
+    login(user,psw){
+        let username:string=user.value;
+        let password:string=psw.value;
 
         let useLen:number = username.length;
         let pwdLen:number = password.length;
@@ -36,11 +37,12 @@ export class LoginComponent implements OnInit {
         }else{
             this.http.get('login',{username,password}).then((res) => {
                 // console.log(res.data);
-                if(res.data.length>0){
-                    window.localStorage.setItem('user',res.data[0].username);
+                if(res['data'].length>0){
+                    window.localStorage.setItem('user',res['data'][0].username);
                     this.showPop = true;
                     this.remind = '恭喜你，可以愉快的玩游戏了';
                     this.router.navigate(['/home/']);
+                    window.localStorage.setItem('user',username);
 
                 }else{
                     this.showPop = true;
@@ -67,5 +69,8 @@ export class LoginComponent implements OnInit {
             $('#psw').attr('type','password');
             $('.icon-yanjing').removeClass('active');
         }
+    }
+    close(){
+        this.router.navigate(['/home/zuixin']);
     }
 }

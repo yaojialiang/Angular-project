@@ -12,9 +12,8 @@
         <i class="iconfont icon-gouwuchekong"></i>
         <span>购物车</span>
     </a>    
-    <a routerLink="/mine" [class.ac]="curr == 'wode'">
+    <a [class.ac]="curr == 'wode'" (click)="gomin()">
         <i class="iconfont icon-xiazai4"></i>
-
         <span>我的</span>
     </a>     
 </div>

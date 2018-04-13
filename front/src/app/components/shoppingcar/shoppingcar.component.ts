@@ -21,21 +21,23 @@ export class ShoppingcarComponent implements OnInit {
 
   constructor(private http :HttpclientService ,private router:Router) { }
   ngOnInit() {
-        let admin:string='admin';
-        this.http.get('sorder',{username:admin}).then((res)=>{
-          console.log(res)
-          this.dataset1 = res['data'];
-          if(res['data'].length>0){
-            for(let i=0;i<this.dataset1.length;i++){
-                this.http.get('sgoods',{id:this.dataset1[i].goodsID}).then((res)=>{
-                    let id:number = this.dataset1[i]['id']
-                    res['data'][0]['orderID']=id;
-                    this.dataset.push(res['data'][0]);
-                })
+        if(window.localStorage.getItem('user')){
+          this.http.get('sorder',{username:window.localStorage.getItem('user')}).then((res)=>{
+            console.log(res)
+            this.dataset1 = res['data'];
+            if(res['data'].length>0){
+              for(let i=0;i<this.dataset1.length;i++){
+                  this.http.get('sgoods',{id:this.dataset1[i].goodsID}).then((res)=>{
+                      let id:number = this.dataset1[i]['id']
+                      res['data'][0]['orderID']=id;
+                      this.dataset.push(res['data'][0]);
+                  })
+              }
             }
-          }
-          console.log(this.dataset)
-        })
+            console.log(this.dataset)
+          })
+        }
+        
   }
   checkall(event: any){
     let n:number = this.dataset.length;
@@ -113,5 +115,8 @@ export class ShoppingcarComponent implements OnInit {
         }
       })
     }
+  }
+  godetails(event:any,id:any){
+    this.router.navigate(['/details/'+id]);
   }
 }
