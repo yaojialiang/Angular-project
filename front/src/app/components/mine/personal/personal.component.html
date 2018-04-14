@@ -1,0 +1,44 @@
+<div id="personal">
+    <div class="header">
+        <a routerLink="/mine"><div class="iconfont icon-iconfontjiantou1"></div></a>
+        <div>基本信息</div>
+        <div class="keep" (click)="keep()">保存</div>
+    </div>
+    <div class="main">
+        <div class="mt" (click)="photo()">
+            <div class="tou">
+                <img [src]="imgs">
+            </div>
+        </div>
+        <div class="mb">
+            <div class="nick">
+                <span>昵称</span>
+                <input type="text" name="" [(ngModel)]="nickname" />
+            </div>
+            <!-- <p *ngIf="remind">长度不能超过10个汉字或20字符</p> -->
+            <p>长度不能超过10个汉字或20字符</p>
+            <div class="sex">
+                <span>性别</span>
+                <ul>
+                    <li><div (click)="nan()" [ngClass]="{'iconfont':true,'icon-nan':true,'active1':sex=='nan'}"></div></li>
+                    <li><div [ngClass]="{'iconfont':true,'icon-nvfemale128':true,'active2':sex=='nv'}" (click)="nv()"></div></li>
+                    <li><div [ngClass]="{'iconfont':true,'icon-zhongxing':true,'active3':sex=='zhong'}" (click)="zhong()"></div></li>
+                </ul>
+            </div>
+            <button (click)="exit()">退出登录</button>
+        </div>
+    </div>
+    <div class="mask" (click)="closshow($event)">
+        <div class="pop">
+            <div class="head">
+                <p>更改头像</p>
+                <p>拍照</p>
+                <p class="getpic">
+                    <span class="span">本地图片</span>
+                    <input type="file" name="head" class="pic" (change)="setpic($event,picele)" #picele />
+                </p>
+            </div>
+            <div class="cancel">取消</div>
+        </div>
+    </div>
+</div>

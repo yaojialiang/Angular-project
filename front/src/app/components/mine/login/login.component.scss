@@ -1,0 +1,35 @@
+#login{
+    width: 100%;height: 100%;background-color:#fff;display:flex;flex-direction:column;
+    .header{
+        width: 100%;height:1.393333rem;background-color:#343434;display:flex;
+        div:nth-child(1){
+            height:1.393333rem;line-height:1.393333rem;width:2.266667rem;color:#999999;text-align:center;font-size:0.41rem;
+        }
+        div:nth-child(2){
+            flex:1;height:1.393333rem;line-height:1.393333rem;color:#CCCCCC;font-size:0.436rem;align-self:center;text-align:center;
+        }
+        div:nth-child(3){
+            height:1.393333rem;line-height:1.393333rem;width:2.266667rem;color:#999999;font-size:0.41rem;text-align:center;
+        }
+    }
+
+    .main{
+        h1{width: 100%;margin-top: 1.386667rem;height:2.413333rem;background:url('../../../../assets/img/logo.png') no-repeat;background-size:contain;margin-bottom: 0.226667rem;}
+        >div:nth-child(2),>div:nth-child(3){
+            height:1.746667rem;margin-left:1.906667rem;margin-right: 0.9rem;border-bottom:2px solid #DCDCDC;padding-top:0.39rem;position:relative;
+            input{width: 100%;height:1.28667rem;color:#999999;font-size:0.406667rem;border:none;}
+            .icon-shouji,.icon-jiesuo{display:block;position:absolute;left:-0.87rem;top:0.78rem;font-size:0.503333rem;color:#C5C5C5;}
+            .icon-yanjing{
+                display:block;position:absolute;width: 0.666667rem;font-size:0.503333rem;top:0.78rem;right:0.1rem;font-size:0.503333rem;color:#C5C5C5;
+            }
+            .active{color:orange;}
+        }
+        >div:nth-child(4){
+            height:1.506667rem;line-height:1.50rem;color:#B5B5B5;font-size:0.33rem;margin-left: 0.896667rem;
+        }
+        button{width: 80%;height:1.153333rem;background-color:#FF5722;text-align:center;color:#FFFFFF;font-size:0.413333rem;margin-left:0.89rem;margin-right: 0.9rem;}
+        p{font-size:0.4105rem;color:#FF5722;text-align:center;margin-top: 0.493333rem;}
+    }
+
+    .pop{position:absolute;left: 48%;top:45%;transform:translate(-50%,0);padding-left: 0.3rem;padding-right: 0.3rem;height: 0.9067rem;line-height: 0.907rem;background-color:#000;opacity:0.6;color:#fff;text-align:center;font-size:0.45rem;border-radius:0.2rem;}
+}

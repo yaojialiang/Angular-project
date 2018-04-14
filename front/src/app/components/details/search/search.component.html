@@ -1,0 +1,32 @@
+<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_623473_zkszi9x2ec1eb3xr.css">
+<div id="gamesearch">
+	<div class="header">
+		<input type="text" name="" class="search_in" #input (input)="change($event,input)"/>
+		<div class="search_for" (click)="mohu($event,input)"><i class="iconfont icon-untitled94" (click)="clearfont($event,input)"></i>搜索</div>
+	</div>
+	<div class="main">
+		<div class="his_main" *ngIf="dataset.length<1">
+			<div class="searchhis" >搜索历史</div>
+			<div *ngIf="arr.length>0">
+				<div class="searchhis" *ngFor="let val of arr" #itemhis (click)="checkhis($event,input)">
+					{{val}} <i class="iconfont icon-untitled94" (click)="clearhis($event,itemhis)" ></i>
+				</div>
+			</div>
+		</div>
+		<div class="goodslist" *ngFor="let item of dataset" (click)="getid(item.id)">
+			<div class="img">
+				<img [src]="item.cover">
+			</div>
+			<div class="con">
+				<p>{{item.name}}</p>
+				<p class="label">
+					<span>{{item.label}}</span>
+				</p>
+				<p class="price">￥<span>{{item.price}}</span></p>
+			</div>
+		</div>
+		<div class="wen" *ngIf="show">
+			<h1>不要搜了查不到啊~~~</h1>
+		</div>
+	</div>
+</div>

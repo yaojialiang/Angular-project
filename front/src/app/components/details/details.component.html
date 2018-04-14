@@ -1,0 +1,79 @@
+<link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_621568_oadz7mnq9z4cxr.css">
+<div id="details">
+	<div class="header">
+		<div class="item1">
+			<i class="iconfont icon-jiantou3" (click)="back()"></i>
+		</div>
+		<div class="conserch">
+			<div class="ac">商品</div>
+			<div>点评</div>
+		</div>
+		<div class="item2">
+			<i class="iconfont icon-101" (click)="sellist()"></i>
+			<div class="selitem" *ngIf="selitem">
+				<a routerLink="/home">首页</a>
+				<a>消息</a>
+				<a>分享</a>
+			</div>
+		</div>
+	</div>
+	<div class="main" *ngIf="dataset.length>0">
+		<div class="swiper-container">
+		    <div class="swiper-wrapper" (touchstart)="dow($event)" (touchend)="dow($event)" style="margin-left:-100%">
+		    	<div class="swiper-slide">
+		    		<span class="pagenum">{{arr.length+1}}/{{arr.length}}</span>
+		    		<img [src]="arr[arr.length-1]">
+		    	</div>
+		        <div class="swiper-slide" *ngFor="let val of arr">
+		        	<span class="pagenum">{{arr.indexOf(val)+1}}/{{arr.length}}</span>
+		        	<img [src]="val">
+		        </div>
+		        <div class="swiper-slide">
+		        	<span class="pagenum">1/{{arr.length}}</span>
+		        	<img [src]="arr[0]">
+		        </div>
+		    </div>
+		</div>
+		<div class="game">
+			<p class="name">{{dataset[0].name}}</p>
+			<p class="nickname">{{dataset[0].nickname}}</p>
+			<p class="price">￥{{dataset[0].price}}</p>
+			<p class="label">#{{dataset[0].label}}</p>
+		</div>
+		<div class="game_item1">
+			<span>此游戏本体免费，可在steam上直接领取..</span>
+			<i class="iconfont icon-jiantou"></i>
+		</div>
+		<div class="game_item1">
+			<span>此游戏的DLC<a>(共4个)</a></span>
+			<i class="iconfont icon-jiantou"></i>
+		</div>
+		<div class="game_bto">
+			<div class="tag" (click)="togtag($event)">
+				<span  [class.ac]="fl=='tu'">图文详情</span>
+				<span  [class.ac]="fl=='shou'">发售详情</span>
+				<span  [class.ac]="fl=='pei'">配置详情</span>
+				<div class="tag_move">
+					<span></span>
+				</div>
+			</div>
+			
+			<div class="datalist" *ngIf="dataset.length>0" [innerHtml]="dataset[0][changTag]">
+				
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div style="flex: 1;" (click)="gocar()">
+			<i class="iconfont icon-gouwuche" style="margin-top:-0.2rem"></i>
+			<p>购物车</p>
+		</div>
+		<div style="flex: 1;">
+			<i class="iconfont icon-shoucang" style="font-size:0.48rem"></i>
+			<p>收藏</p>
+		</div>
+		<div style="flex: 2;background: #FF9700;color:#fff" (click)="addcar()">加入购物车</div>
+		<div style="flex: 2;background: #FE5722;color:#fff" (click)="nowbuy()">立即购买</div>
+	</div>
+	<app-spinner-car [taslk]="taslk" *ngIf="taslkshow"></app-spinner-car>
+</div>

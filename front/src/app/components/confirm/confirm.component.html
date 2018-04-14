@@ -1,0 +1,38 @@
+<div id="confirm">
+    <ul class='header'>
+        <a routerLink="/shoppingcar">
+            <li><i class="icon iconfont icon-xiangzuo"></i></li>
+        </a>
+        <li>确认订单</li>
+        <li></li>
+    </ul>
+    <div class="main">
+        <ul class="carslist">
+            <li *ngFor="let item of dataset">
+                <img [src]="item.cover" />
+                <div class="carslist-tittle">
+                    <p class="tittle">{{item.name}}</p>
+                    <p class="price">￥{{item.price}}.0</p>
+                </div>
+            </li>
+        </ul>
+        <ul class="invoice">
+            <li>发票</li>
+            <li>不开发票<i class="icon iconfont icon-youjiantou-01"></i></li>
+        </ul>
+        <ul class="coupon">
+            <li>优惠卷</li>
+            <li>未使用<i class="icon iconfont icon-youjiantou-01"></i></li>
+        </ul>
+         <ul class="coupon">
+            <li>共<span class="qty">{{qty}}</span>个商品</li>
+            <li>总计:<span class="price">￥{{allprice}}</span></li>
+        </ul>
+    </div>
+    <div class="l-present">
+        <div class="present-l">实付:<span class="price1">￥{{allprice}}.00</span></div>
+        <a routerLink="/payment">
+            <div class="present-r">提交订单</div>
+        </a>
+    </div>
+</div>

@@ -1,7 +1,310 @@
 <div id="home">
-    <div class='header'></div>
-    <div class='main'>首页</div>
-    <app-footer></app-footer>
+    <div class='header'>
+        <i class="icon iconfont icon-BAI-lingdang"></i>
+        <div>
+            <span class="youxi">游戏</span>
+            <span>周边</span>
+        </div>
+        <i class="icon iconfont icon-sousuo1" (click)="gosearch()"></i>
+    </div>
+    <div class='main'>
+        <!-- 轮播图 -->
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://s1.sonkwo.com/FhbugWH_rl-1KMlO2YvMove97bBq" alt="" /></div>
+                <div class="swiper-slide"><img src="https://s1.sonkwo.com/Fl_aJ6PgX70EqUI1p82CyGqvDeL3" alt="" /></div>
+                <div class="swiper-slide"><img src="https://s1.sonkwo.com/Fm2iMUHGgy7ERg9c2XCU4VjpAKD5" alt="" /></div>
+                <div class="swiper-slide"><img src="https://s1.sonkwo.com/FrdrtGzkHiXc2rmOIiCtUmijoNJS" alt="" /></div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+            
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            
+            <!-- 如果需要滚动条 -->
+            <div class="swiper-scrollbar"></div>
+        </div>
+        <!-- 活动 -->
+        <div id="huodong">
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="imgs1">
+                        </div>
+                        <p>活动</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="imgs2">
+                        </div>
+                        <p>优惠</p>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/allclass">
+                        <div class="imgs3">
+                        </div>
+                        <p>全部分类</p>
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/manu">
+                        <div class="imgs4">
+                        </div>
+                        <p>厂商目录</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 头条 -->
+        <div class="toutiao">
+            <div class="logo2">
+                
+            </div>
+            <div class="neirong">
+                <ul class="lunbo"> 
+                     <li>一家游戏店的结业，为何会惊动大半个日本游戏圈？</li>
+                     <li>重温自己在TGA上大骂奥斯卡的抽风表现，他露出了这样的表情</li>
+                     <li>王牌特工登场！ 《幽灵行动：荒野》联动《细胞分裂》开启特殊活动</li>
+                     <li>人生在世须尽欢 莫使金樽空对月</li>
+                </ul>
+            </div>
+        </div>
+        <!-- 畅销 -->
+        <div class="changxiao">
+            <div class="dianzi">
+            </div>
+            <div class="changxiaoname">
+                畅销大作
+            </div>
+            <div class="changxiaomain">
+                <ul>
+                    <li>
+                        <div class="changxiaoimg">
+                            <img src="https://s1.sonkwo.com/FjLzSGxF8lLm3a8Wqlcq8kjqkbr3" alt="" />
+                            <div class="changxiaotitle">
+                                街霸 30周年纪念合集
+                            </div>
+                            <div class="changxiaoprice">
+                                ￥209.0
+                            </div>
+                        </div>
+                        
+                    </li>
+                    <li>
+                        <div class="changxiaoimg">
+                            <img src="https://s1.sonkwo.com/FlYxZMJ8bRK-NmB_pq0FjK-4jPaH" alt="" />
+                            <div class="changxiaotitle">
+                                刀剑神域：夺命凶弹
+                            </div>
+                            <div class="changxiaoprice">
+                                ￥278.0
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="changxiaoimg">
+                            <img src="https://s1.sonkwo.com/FqZguQ9_2448biLLelYHtz3swyUt" alt="" />
+                            <div class="changxiaotitle">
+                                鬼泣 高清合集
+                            </div>
+                            <div class="changxiaoprice">
+                                ￥259.0
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="changxiaoimg">
+                            <img src="https://s1.sonkwo.com/FohGqKG-iQ3-L3jx8ijcxff-ZpSH" alt="" />
+                            <div class="changxiaotitle">
+                                最终幻想15
+                            </div>
+                            <div class="changxiaoprice">
+                                ￥329.0
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="changxiaoimg">
+                            <img src="https://s1.sonkwo.com/FklhvC5XT0hi8M9gVKij2I2GJmsa" alt="" />
+                            <div class="changxiaotitle">
+                                龙珠斗士Z
+                            </div>
+                            <div class="changxiaoprice">
+                                ￥268.0
+                            </div>
+                        </div>
+                    </li>   
+                </ul>
+            </div>
+            <div class="dianzi">
+                
+            </div>
+        </div>
+        <!-- 新品大作 -->
+        <div class="changxiao">
+            <div class="changxiaoname">
+                新品上市
+            </div>
+            <div class="changxiaomain">
+                <ul>
+                    <li>
+                        <div class="changxiaoimg">
+                            <img src="https://s1.sonkwo.com/Fu4SFP0fwo9WO26GN8_OSyU8WBaw" alt="" />
+                            <div class="changxiaotitle">
+                                银河轨道死亡竞技
+                            </div>
+                            <div class="changxiaoprice">
+                                ￥169.0
+                            </div>
+                        </div>
+                        
+                    </li>
+                    <li>
+                        <div class="changxiaoimg">
+                            <img src="https://s1.sonkwo.com/Fumng30lzoUqSsGQUDKJ3kyamIRh" alt="" />
+                            <div class="changxiaotitle">
+                                自由大作战
+                            </div>
+                            <div class="changxiaoprice">
+                                ￥238.0
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="changxiaoimg">
+                            <img src="https://s1.sonkwo.com/Fup7LSUXL0G1oWxrmfJ-DV-3eMH3" alt="" />
+                            <div class="changxiaotitle">
+                                曼岛摩托车赛
+                            </div>
+                            <div class="changxiaoprice">
+                                ￥259.0
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="changxiaoimg">
+                            <img src="https://s1.sonkwo.com/Fk9NQFIbDQpdeMMsd9nIRcg_au5F" alt="" />
+                            <div class="changxiaotitle">
+                                端流
+                            </div>
+                            <div class="changxiaoprice">
+                                ￥329.0
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="changxiaoimg">
+                            <img src="https://s1.sonkwo.com/FkoUfdINMeHAovO5gyLqW5pQvMw7" alt="" />
+                            <div class="changxiaotitle">
+                                临终：重生试炼
+                            </div>
+                            <div class="changxiaoprice">
+                                ￥49.0
+                            </div>
+                        </div>
+                    </li>   
+                </ul>
+            </div>
+            <div class="dianzi">
+                
+            </div>
+        </div>
+        <!-- 精品游戏推荐 -->
+        <div class="changxiao">
+            <div class="changxiaoname">
+                新品上市
+            </div>
+            <div class="changxiaomain">
+                <ul>
+                    <li>
+                        <div class="changxiaoimg">
+                            <img src="https://s1.sonkwo.com/FqFSqxSMuyyVHbWKNxIH7JZP10lg" alt="" />
+                            <div class="changxiaotitle">
+                                银河轨道死亡竞技
+                            </div>
+                            
+                        </div>
+                        
+                    </li>
+                    <li>
+                        <div class="changxiaoimg">
+                            <img src="https://s1.sonkwo.com/Fhdi0O-uA4mPmSdxO4aNzUzC7q1g" alt="" />
+                            <div class="changxiaotitle">
+                                经典三基友
+                            </div>
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <div class="changxiaoimg">
+                            <img src="https://s1.sonkwo.com/FgR_JrAy8OSopc-ys9PtDbLojTRu" alt="" />
+                            <div class="changxiaotitle">
+                                恋爱24H
+                            </div>
+                        
+                        </div>
+                    </li>
+                    <li>
+                        <div class="changxiaoimg">
+                            <img src="https://s1.sonkwo.com/Fk9NQFIbDQpdeMMsd9nIRcg_au5F" alt="" />
+                            <div class="changxiaotitle">
+                                端流
+                            </div>
+                            
+                        </div>
+                    </li>
+                    <li>
+                        <div class="changxiaoimg">
+                            <img src="https://s1.sonkwo.com/FkoUfdINMeHAovO5gyLqW5pQvMw7" alt="" />
+                            <div class="changxiaotitle">
+                                临终：重生试炼
+                            </div>
+                        
+                        </div>
+                    </li>   
+                </ul>
+            </div>
+            <div class="dianzi">
+                
+            </div>
+            <div class='jump'>
+                <ul>
+                    <li>
+                        <a routerLink="/home/zuixin" [class.active]="types == 'zuixin'" (click)="this.types='zuixin'">
+                            最新
+                        </a>
+                    </li>
+                    <li >
+                        <a routerLink="/home/cuxiao" [class.active]="types == 'cuxiao'" (click)="this.types='cuxiao'">
+                            促销
+                        </a>
+                    </li>
+                    <li>
+                       <a routerLink="/home/zuixin" [class.active]="types == 'yushou'" (click)="this.types='yushou'">
+                            预售
+                        </a>
+                    </li>
+                    <li>
+                        <a  routerLink="/home/cuxiao" [class.active]="types == 'zhoupaihang'" (click)="this.types='zhoupaihang'">
+                            周排行
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/home/zuixin" [class.active]="types == 'yuepaihang'" (click)="this.types='yuepaihang'">
+                            周排行
+                        </a>
+                    </li>
+                </ul>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+    <app-footer [curr]="home"></app-footer>
 </div>
 
 

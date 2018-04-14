@@ -1,0 +1,40 @@
+<div id="reg">
+    <div class="header">
+        <a routerLink="/login"><div class="close">登录</div></a>
+        <div>注册</div>
+        <div></div>
+    </div>
+    <div class="main">
+        <h1></h1>
+        <div>
+            <i class="iconfont icon-shouji"></i>
+            <input type="text" placeholder="请输入手机号" class="ip1" (blur)="getPhone()"  [(ngModel)]="username"/>
+            <p *ngIf="regstr">
+                <span class="phone">您输入的手机号格式不正确</span>
+                <i class="arrow"></i>
+            </p>
+            
+        </div>
+        <div>
+            <i class="iconfont icon-anquanweishi"></i>
+            <input type="text" placeholder="请输入图片中验证码" class="vCode"/>
+            <span class="get" (click)="getCode()">获取</span>
+        </div>
+        <div class="code">
+            
+        </div>
+        <div>
+            <i class="iconfont icon-jiesuo"></i>
+            <input type="password" placeholder="请输入密码" id="pwd"  [(ngModel)]="password" (keyup)="onKeyup()" />
+            <i class="iconfont icon-yanjing" (click)="showPwd()"></i>
+        </div>
+        <ul class="prefun">
+            <li class="k"> 弱 </li>
+            <li> 强 </li>
+            <li> 很强 </li>
+        </ul>
+        <button class="btnClick" (click)="getReg(username,password)">注册</button>
+        <p>注册代表你同意<span>《杉果协议》</span></p>
+    </div>
+    <div class="pop" *ngIf="showPop">{{remind}}</div>
+</div>

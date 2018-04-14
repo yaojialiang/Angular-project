@@ -1,1 +1,93 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    margin:0;
+}
+html,body{
+    width:100%;
+    height:100%; 
+    font-family:"微软雅黑";
+    position:relative;
+    font-size:0.373333rem;
+}
+body,h1,h2,h3,h4,p,a,input,img,ul,li,ol,dl,dt,dd{
+    padding:0;
+    margin:0;}
+ul,ol{
+    list-style:none;
+}
+img{
+    display:block;
+    border:0;}
+input{
+    outline:none;}
+header,footer,section,main,nav{
+    display:block;}
+
+a{
+    text-decoration:none;
+    color:#323131;
+}
+*{box-sizing:border-box;}
+
+#app{
+    height:100%;
+}
+
+#details .content{
+    padding: 0.266667rem;
+    font-size: 0.426667rem;
+}
+#details .content p{
+    margin: 0.533333rem 0;
+}
+#details .content ul{
+    color:#444;
+}
+#details .product-term-container{
+    display: flex;
+    padding: 0 0.266667rem;
+    margin-top:0.266667rem;
+}
+#details .product-term-container .term-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    padding: 0.133333rem;
+    border-radius: 0.133333rem;
+    background: #ECECEC;
+}
+#details .product-term-container .item-container{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    margin-left:0.4rem;
+}
+#details .product-term-container .item-container .term-items{
+    margin-right:0.266667rem;
+}
+#details .system-parameter-table{
+    width: 100%;
+    border: solid 1px #e5e5e5;
+    font-size: 0.453333rem;
+    margin-top: 1.25rem;
+    margin-bottom: 0.9375rem;
+}
+#details .system-parameter-table tr{
+    border: solid 1px #e5e5e5;
+}
+#details .system-parameter-table tr .lab {
+    width: 4.6875rem;
+    padding: 0.4rem 0rem;
+    line-height: 0.4rem;
+}
+#details .system-parameter-table tr td{
+    border-right: solid 1px #e5e5e5;
+    text-align: center;
+}
+#details .system-parameter-table tr .info{
+    padding: 0rem 0.9375rem;
+    word-break: break-all;
+    word-wrap: break-word;
+    line-height: 1.25rem;
+    text-align: left;
+}
