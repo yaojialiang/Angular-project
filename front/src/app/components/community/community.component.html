@@ -21,7 +21,7 @@
     <div class='main' >
     	<div class="goodslist" *ngFor="let item of dataset" (click)="getid(item.id)">
     		<div class="img">
-    			<img [src]="item.cover" class="setimg">
+    			<img src="../../../assets/img/loding2.gif" [name]="item.cover" class="setimg" appLoading>
     		</div>
     		<div class="con">
     			<p>{{item.name}}</p>

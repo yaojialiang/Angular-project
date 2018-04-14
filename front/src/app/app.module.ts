@@ -39,6 +39,7 @@ import { PersonalComponent } from './components/mine/personal/personal.component
 import { CuxiaoComponent } from './components/cuxiao/cuxiao.component';
 import { AllclassComponent } from './components/allclass/allclass.component';
 import { ManuComponent } from './components/manu/manu.component';
+import { LoadingDirective } from './directives/loading.directive';
 
 
 
@@ -75,7 +76,8 @@ import { ManuComponent } from './components/manu/manu.component';
     SpinnerComponent,
     SpinnerCarComponent,
     ZuixinComponent,
-    ManuComponent
+    ManuComponent,
+    LoadingDirective
   ],
   imports: [
     BrowserModule,

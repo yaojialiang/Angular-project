@@ -104,13 +104,14 @@ export class RegComponent implements OnInit {
 
     //判断密码强度
     onKeyup(){
-        if($('#pwd').val().length>5){
+        let num:any=$('#pwd').val();
+        if(num.length>5){
             $('.prefun').children()[1].className='k';
         }else{
             $('.prefun').children()[1].className='kiss';
         }
 
-        if($('#pwd').val().length>10){
+        if(num.length>10){
             $('.prefun').children()[2].className='k';
         }else{
             $('.prefun').children()[2].className='kiss';
@@ -120,7 +121,8 @@ export class RegComponent implements OnInit {
 
     //用户名失去焦点时触发
     getPhone(){
-        if(!/^1[34578]\d{9}$/.test($('.ip1').val())){
+        let num:any=$('.ip1').val()
+        if(!/^1[34578]\d{9}$/.test(num)){
 
             this.showPop = true;
             this.remind = '您输入的手机号格式不正确';
