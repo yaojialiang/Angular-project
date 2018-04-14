@@ -1,0 +1,3 @@
+{
+    "cols": "id,name,nickname,price,label,hot,new"
+}

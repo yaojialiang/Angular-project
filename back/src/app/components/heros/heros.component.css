@@ -1,0 +1,25 @@
+.pages{
+	list-style: none;
+	overflow: hidden;
+	padding: 0
+}
+.pages li{
+	float: left;
+	display: block;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border:1px solid #ccc;
+	margin-right:5px;
+	cursor:pointer;
+}
+.pages li span{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.pages li .hight{
+	background: #58bc58;
+	color:#fff;
+}

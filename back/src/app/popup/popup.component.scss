@@ -1,0 +1,23 @@
+/* 
+* @Author: Marte
+* @Date:   2018-04-12 10:59:27
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-04-12 11:43:43
+*/
+#popup{
+    
+    width:500px;
+    height:600px;
+    background-color:#fff;
+    border-radius: 10px;
+    position:absolute;
+    z-index: 100;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    padding:20px;
+    overflow-x:hidden;
+    .btn{
+        margin-right:20px;
+    }
+}

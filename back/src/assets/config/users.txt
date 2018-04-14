@@ -1,0 +1,3 @@
+{
+    "cols": "id,username,password,nickname,sex"
+}
