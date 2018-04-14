@@ -1,5 +1,5 @@
 import { Component, OnInit ,Input} from '@angular/core';
-import { Http } from '@angular/http';
+import {HttpclientService} from '../../services/httpclient.service'
 import { Router,ActivatedRoute,} from '@angular/router';
 @Component({
   selector: 'app-zuixin',
@@ -9,11 +9,11 @@ import { Router,ActivatedRoute,} from '@angular/router';
 export class ZuixinComponent implements OnInit {
     data:Array<any>;
     id:number;
-  constructor(private http: Http, private router: Router,private route: ActivatedRoute) { }
+  constructor(private http: HttpclientService, private router: Router,private route: ActivatedRoute) { }
 
   ngOnInit() {
-     this.http.get('http://10.3.136.33:8080/sgoods?hot=true').subscribe((res) => {
-            this.data = res.json().data;
+     this.http.get('sgoods',{hot:true}).then((res) => {
+            this.data = res['data'];
         });
       
   }
