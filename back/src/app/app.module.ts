@@ -13,6 +13,13 @@ import { NavComponent } from './home/nav/nav.component';
 import { GoodsComponent } from './goods/goods.component';
 import { DatagridComponent } from './datagrid/datagrid.component';
 import { LoginComponent } from './login/login.component'
+import { HttpclientService} from './services/httpclient.service';
+import { PopupComponent } from './popup/popup.component';
+import { ShadowComponent } from './shadow/shadow.component';
+import { AddgoodsComponent } from './addgoods/addgoods.component';
+import { UsersComponent } from './users/users.component';
+import { IndexComponent } from './index/index.component';
+import { UserpopupComponent } from './userpopup/userpopup.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,15 +30,22 @@ import { LoginComponent } from './login/login.component'
     NavComponent,
     GoodsComponent,
     DatagridComponent,
-    LoginComponent
+    LoginComponent,
+    PopupComponent,
+    ShadowComponent,
+    AddgoodsComponent,
+    UsersComponent,
+    IndexComponent,
+    UserpopupComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
-    AppRouter
+    AppRouter,
+
   ],
-  providers: [],
+  providers: [HttpclientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

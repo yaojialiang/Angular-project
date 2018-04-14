@@ -1,0 +1,11 @@
+/* 
+* @Author: Marte
+* @Date:   2018-04-13 11:00:06
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-04-13 11:05:14
+*/
+.header{width: 100%; height: 48px; border: solid 1px; background:url('../../assets/libs/head.jpg');}
+
+.body{position: fixed; top: 48px; left: 0; right: 0; bottom: 0; border:  solid 1px;}
+.body>.nav{position: absolute; left: 0; width: 200px; border-right: solid 1px; top: 0; bottom: 0;background:#5E5E5E;}
+.body>.container{position: absolute; left: 200px; top: 0; right: 0; bottom: 0;overflow: auto;background:#E0E0E0;}

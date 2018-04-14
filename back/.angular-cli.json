@@ -13,7 +13,8 @@
         "src/assets/config/student.txt",
         "src/assets/libs",
         "src/assets/images",
-        "src/assets/bootstrap"
+        "src/assets/bootstrap",
+        "filter.txt"
       ],
       "index": "index.html",
       "main": "main.ts",

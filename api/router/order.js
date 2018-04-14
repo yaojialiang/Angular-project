@@ -52,11 +52,30 @@ module.exports = {
         })
         app.get('/addorder', (req, res) => {
             let data = req.query;
-            var sql=`insert into userorder(username,goodsID,qty,price,status) values('${data.username}','${data.id}','${data.qty}','${data.price}','${data.status}')`;
-            console.log(sql)
-             db.mysql.insert(sql, function(data){
+            var sql = `select * from userorder where username='${data.username}' and goodsID='${data.id}'`
+            sql +=";select FOUND_ROWS() as rowsCount;";
+            db.mysql.select(sql, function(data1){
+                if(data1.data.length>0){
+                    res.send(false);
+                }else{
+                    
+                    var sql=`insert into userorder(username,goodsID,price,buy,status) values('${data.username}','${data.id}','${data.price}','${data.buy}','${data.status}')`;
+                    
+                     db.mysql.insert(sql, function(data){
+                        
+                        res.send(data);
+                    })
+                }
                 
-                res.send(data);
+            })
+            
+        })
+        app.get('/sorder',(req,res)=>{
+            let data = req.query;
+            var sql = `select * from userorder where username='${data.username}'`
+            sql +=";select FOUND_ROWS() as rowsCount;";
+            db.mysql.select(sql,function(data1){
+                res.send(data1);
             })
         })
         app.get('/uporder',(req,res) => {
@@ -82,6 +101,22 @@ module.exports = {
                 sql+=`${attr}='${obj[attr]}' and `
             }
             sql+=`1=1`;
+            console.log(sql);
+            db.mysql.delete(sql, function(data){
+                res.send(data);
+            })
+        })
+        app.get('/delcar',(req,res) => {
+            var arr=req.query.ipt;
+            var sql = `delete from userorder where `
+            if(Array.isArray(arr)){
+                arr.forEach((res) => {
+                    sql+=`id='${res}' or `
+                })
+                sql=sql.slice(0,sql.length-3)
+            }else{
+                sql+=`id=${arr}`
+            }
             console.log(sql);
             db.mysql.delete(sql, function(data){
                 res.send(data);

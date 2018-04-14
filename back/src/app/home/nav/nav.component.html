@@ -13,8 +13,8 @@
     </div>
     <div class="div3">
         <ul>
-            <li><a routerLink="/goods">商品信息</a></li>
-            <li>添加商品</li>
+            <li><a routerLink="/index/goods">商品信息</a></li>
+            <li><a routerLink="/index/addgoods">添加商品</a></li>
             <li> 导航菜单</li>
         </ul>
     </div>
@@ -24,7 +24,7 @@
     </div>
     <div class="div3">
         <ul>
-            <li> 用户信息</li>
+            <li> <a routerLink="/index/users">用户信息</a></li>
             <li> 文章分类</li>
             <li> 添加文章</li>
         </ul>
@@ -56,4 +56,5 @@
     </div>
     <div>
     </div>
+    <app-popup *ngIf='showpop'></app-popup>
 </div>

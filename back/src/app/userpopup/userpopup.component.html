@@ -1,0 +1,35 @@
+<div id="popup">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">id</label>
+        <input type="email" class="form-control" id="goodsId" placeholder="id" value="{{currentgoods.id}}">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">imgs</label>
+        <input type="email" class="form-control" id="goodsImgs" placeholder="imgs" value="{{currentgoods.imgs}}">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">name</label>
+        <input type="email" class="form-control" id="goodsName" placeholder="name" value="{{currentgoods.username}}">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">nickname</label>
+        <input type="email" class="form-control" id="goodsNickname" placeholder="nickname" value="{{currentgoods.nickname}}">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">password</label>
+        <input type="email" class="form-control" id="goodsPassword" placeholder="password" value="{{currentgoods.password}}">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">sex</label>
+        <input type="email" class="form-control" id="goodsSex" placeholder="sex" value="{{currentgoods.sex}}">
+      </div>
+      
+      
+      
+      
+      
+      <button type="submit" class="btn btn-default" (click)="update()">Submit</button><button class="btn btn-default" (click)="hiddenpop()">Cancel</button>
+    </form>
+</div>
+<app-shadow></app-shadow>

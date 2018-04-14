@@ -6,6 +6,7 @@ import * as $ from 'jquery';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
+    
 	s_h(event: any){
 		console.log(event);
 		$(event.target).next('.div3').slideToggle();
@@ -14,5 +15,5 @@ export class NavComponent implements OnInit {
 
 	ngOnInit() {
 	}
-
+    
 }
